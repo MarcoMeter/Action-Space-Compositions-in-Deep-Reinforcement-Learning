@@ -113,6 +113,65 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &80138111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1334094030119478, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 80138113}
+  - component: {fileID: 80138112}
+  m_Layer: 0
+  m_Name: ShootingBirdsMultiAgentAcademy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &80138112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114900096474357684, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80138111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c740a1edcd5be349bdd88ff6509f83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSteps: 2000
+  trainingConfiguration:
+    width: 320
+    height: 180
+    qualityLevel: 1
+    timeScale: 30
+    targetFrameRate: -1
+  inferenceConfiguration:
+    width: 1280
+    height: 720
+    qualityLevel: 5
+    timeScale: 1
+    targetFrameRate: 60
+  resetParameters:
+    resetParameters: []
+  _log: 0
+--- !u!4 &80138113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4077868193625842, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80138111}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &99819419
 Prefab:
   m_ObjectHideFlags: 0
@@ -161,12 +220,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (14)
@@ -226,12 +285,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (13)
@@ -243,64 +302,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &176836495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  graphModel: {fileID: 4900000, guid: 9d9d64648c76b4e4385569c54dc7209e, type: 3}
-  graphScope: ShootingBirdsShootingBrain
-  graphPlaceholders: []
-  BatchSizePlaceholderName: batch_size
-  VectorObservationPlacholderName: vector_observation
-  RecurrentInPlaceholderName: recurrent_in
-  RecurrentOutPlaceholderName: recurrent_out
-  VisualObservationPlaceholderName: []
-  ActionPlaceholderName: action
-  PreviousActionPlaceholderName: prev_action
-  brain: {fileID: 1181718818}
---- !u!114 &185089975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  graphModel: {fileID: 4900000, guid: 9d9d64648c76b4e4385569c54dc7209e, type: 3}
-  graphScope: ShootingBirdsMovementBrain
-  graphPlaceholders: []
-  BatchSizePlaceholderName: batch_size
-  VectorObservationPlacholderName: vector_observation
-  RecurrentInPlaceholderName: recurrent_in
-  RecurrentOutPlaceholderName: recurrent_out
-  VisualObservationPlaceholderName: []
-  ActionPlaceholderName: action
-  PreviousActionPlaceholderName: prev_action
-  brain: {fileID: 2097423298}
---- !u!114 &357373703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  brain: {fileID: 1181718818}
 --- !u!1001 &440689439
 Prefab:
   m_ObjectHideFlags: 0
@@ -349,12 +350,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (15)
@@ -414,12 +415,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (4)
@@ -431,19 +432,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &612640466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  brain: {fileID: 2097423298}
 --- !u!1001 &617187670
 Prefab:
   m_ObjectHideFlags: 0
@@ -492,12 +480,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (8)
@@ -557,12 +545,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (1)
@@ -699,12 +687,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (6)
@@ -716,117 +704,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
   m_IsPrefabAsset: 0
---- !u!1001 &853472950
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4077868193625842, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077868193625842, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077868193625842, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077868193625842, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077868193625842, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077868193625842, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077868193625842, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4077868193625842, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114982771118828542, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[0]
-      value: 
-      objectReference: {fileID: 955515624}
-    - target: {fileID: 114982771118828542, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[1]
-      value: 
-      objectReference: {fileID: 1154650445}
-    - target: {fileID: 114982771118828542, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[2]
-      value: 
-      objectReference: {fileID: 357373703}
-    - target: {fileID: 114982771118828542, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[3]
-      value: 
-      objectReference: {fileID: 176836495}
-    - target: {fileID: 114707052895796724, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[0]
-      value: 
-      objectReference: {fileID: 2008195350}
-    - target: {fileID: 114707052895796724, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[1]
-      value: 
-      objectReference: {fileID: 612640466}
-    - target: {fileID: 114707052895796724, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[2]
-      value: 
-      objectReference: {fileID: 1904671611}
-    - target: {fileID: 114707052895796724, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[3]
-      value: 
-      objectReference: {fileID: 185089975}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b, type: 2}
-  m_IsPrefabAsset: 0
---- !u!114 &955515624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 0
-  keyContinuousPlayerActions: []
-  axisContinuousPlayerActions: []
-  discretePlayerActions: []
-  brain: {fileID: 1181718818}
---- !u!114 &1154650445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 0
-  brain: {fileID: 1181718818}
 --- !u!1001 &1157958824
 Prefab:
   m_ObjectHideFlags: 0
@@ -875,12 +752,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
   m_IsPrefabAsset: 0
@@ -889,12 +766,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224288239542497648, guid: 5ebddf601f853374fb85a297f89e8e3b,
     type: 2}
   m_PrefabInternal: {fileID: 1157958824}
---- !u!114 &1181718818 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114982771118828542, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-    type: 2}
-  m_PrefabInternal: {fileID: 853472950}
-  m_Script: {fileID: 11500000, guid: c676a8ddf5a5f4f64b35e9ed5028679d, type: 3}
 --- !u!1001 &1218736110
 Prefab:
   m_ObjectHideFlags: 0
@@ -943,12 +814,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (16)
@@ -1008,12 +879,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (10)
@@ -1073,12 +944,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (5)
@@ -1138,12 +1009,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (7)
@@ -1203,12 +1074,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (3)
@@ -1268,12 +1139,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (2)
@@ -1333,12 +1204,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (11)
@@ -1398,12 +1269,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (9)
@@ -1557,12 +1428,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (17)
@@ -1622,12 +1493,12 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 1181718818}
+      objectReference: {fileID: 0}
     - target: {fileID: 114706940298677948, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1688552345330042, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsMultiAgentEnvironment (12)
@@ -1639,34 +1510,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ebddf601f853374fb85a297f89e8e3b, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1904671611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  brain: {fileID: 2097423298}
---- !u!114 &2008195350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 0
-  keyContinuousPlayerActions: []
-  axisContinuousPlayerActions: []
-  discretePlayerActions: []
-  brain: {fileID: 2097423298}
 --- !u!1 &2027924952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,9 +1572,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2097423298 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114707052895796724, guid: aa8bfd57aa4fcb24a8ea6ed92728e96b,
-    type: 2}
-  m_PrefabInternal: {fileID: 853472950}
-  m_Script: {fileID: 11500000, guid: c676a8ddf5a5f4f64b35e9ed5028679d, type: 3}

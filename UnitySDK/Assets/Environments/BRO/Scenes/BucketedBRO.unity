@@ -156,7 +156,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -278,7 +278,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -338,7 +338,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -354,74 +354,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5219225289336a458dc9daba560f3f9, type: 2}
-  m_IsPrefabAsset: 0
---- !u!114 &218179985 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114811526168046622, guid: 86b9c04d0753f4240b53463e68a615f3,
-    type: 2}
-  m_PrefabInternal: {fileID: 270341631}
-  m_Script: {fileID: 11500000, guid: c676a8ddf5a5f4f64b35e9ed5028679d, type: 3}
---- !u!1001 &270341631
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4288308202679516, guid: 86b9c04d0753f4240b53463e68a615f3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288308202679516, guid: 86b9c04d0753f4240b53463e68a615f3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288308202679516, guid: 86b9c04d0753f4240b53463e68a615f3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288308202679516, guid: 86b9c04d0753f4240b53463e68a615f3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288308202679516, guid: 86b9c04d0753f4240b53463e68a615f3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288308202679516, guid: 86b9c04d0753f4240b53463e68a615f3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288308202679516, guid: 86b9c04d0753f4240b53463e68a615f3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288308202679516, guid: 86b9c04d0753f4240b53463e68a615f3, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114811526168046622, guid: 86b9c04d0753f4240b53463e68a615f3,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[0]
-      value: 
-      objectReference: {fileID: 1317418484}
-    - target: {fileID: 114811526168046622, guid: 86b9c04d0753f4240b53463e68a615f3,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[1]
-      value: 
-      objectReference: {fileID: 2000588754}
-    - target: {fileID: 114811526168046622, guid: 86b9c04d0753f4240b53463e68a615f3,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[2]
-      value: 
-      objectReference: {fileID: 1253838875}
-    - target: {fileID: 114811526168046622, guid: 86b9c04d0753f4240b53463e68a615f3,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[3]
-      value: 
-      objectReference: {fileID: 842310960}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 86b9c04d0753f4240b53463e68a615f3, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &309970230
 GameObject:
@@ -551,7 +483,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -611,7 +543,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -671,7 +603,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -728,7 +660,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -745,29 +677,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5219225289336a458dc9daba560f3f9, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &842310960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  graphModel: {fileID: 4900000, guid: 190472ce5ea21334daa244ff28d9da0d, type: 3}
-  graphScope: 
-  graphPlaceholders: []
-  BatchSizePlaceholderName: batch_size
-  VectorObservationPlacholderName: vector_observation
-  RecurrentInPlaceholderName: recurrent_in
-  RecurrentOutPlaceholderName: recurrent_out
-  VisualObservationPlaceholderName: []
-  ActionPlaceholderName: action
-  PreviousActionPlaceholderName: prev_action
-  brain: {fileID: 218179985}
 --- !u!1 &1023671809
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,7 +880,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -988,40 +897,33 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5219225289336a458dc9daba560f3f9, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1179579695 stripped
+--- !u!114 &1179579695
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 114197286944310670, guid: 86b9c04d0753f4240b53463e68a615f3,
     type: 2}
-  m_PrefabInternal: {fileID: 270341631}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1927222502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d36155af0e0c0849bbe4878f39d6a0a, type: 3}
---- !u!114 &1253838875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
+  m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 218179985}
---- !u!114 &1317418484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 0
-  keyContinuousPlayerActions: []
-  axisContinuousPlayerActions: []
-  discretePlayerActions: []
-  brain: {fileID: 218179985}
+  maxSteps: 10000
+  trainingConfiguration:
+    width: 320
+    height: 180
+    qualityLevel: 1
+    timeScale: 15
+    targetFrameRate: -1
+  inferenceConfiguration:
+    width: 1280
+    height: 720
+    qualityLevel: 5
+    timeScale: 1
+    targetFrameRate: 60
+  resetParameters:
+    resetParameters: []
 --- !u!1001 &1518228344
 Prefab:
   m_ObjectHideFlags: 0
@@ -1065,7 +967,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -1125,7 +1027,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -1185,7 +1087,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -1202,6 +1104,37 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5219225289336a458dc9daba560f3f9, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1927222502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1816014157061606, guid: 86b9c04d0753f4240b53463e68a615f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1927222503}
+  - component: {fileID: 1179579695}
+  m_Layer: 0
+  m_Name: BROBucketedAcademy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1927222503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4288308202679516, guid: 86b9c04d0753f4240b53463e68a615f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1927222502}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1941418312
 Prefab:
   m_ObjectHideFlags: 0
@@ -1245,7 +1178,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -1305,7 +1238,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -1365,7 +1298,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -1382,19 +1315,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5219225289336a458dc9daba560f3f9, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &2000588754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  brain: {fileID: 218179985}
 --- !u!1001 &2025579637
 Prefab:
   m_ObjectHideFlags: 0
@@ -1438,7 +1358,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -1498,7 +1418,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -1558,7 +1478,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy
@@ -1618,7 +1538,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 218179985}
+      objectReference: {fileID: 0}
     - target: {fileID: 114419647349502328, guid: e5219225289336a458dc9daba560f3f9,
         type: 2}
       propertyPath: _academy

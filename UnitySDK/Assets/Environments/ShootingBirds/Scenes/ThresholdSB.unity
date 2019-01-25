@@ -113,22 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &65195811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 0
-  keyContinuousPlayerActions: []
-  axisContinuousPlayerActions: []
-  discretePlayerActions: []
-  brain: {fileID: 2097423298}
 --- !u!1001 &113348049
 Prefab:
   m_ObjectHideFlags: 0
@@ -172,7 +156,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (16)
@@ -247,7 +231,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (10)
@@ -279,22 +263,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &307053866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e9bda8f3cf1492fa74926a530f6f70, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 0
-  keyContinuousPlayerActions: []
-  axisContinuousPlayerActions: []
-  discretePlayerActions: []
-  brain: {fileID: 2097423298}
 --- !u!1001 &338705513
 Prefab:
   m_ObjectHideFlags: 0
@@ -338,7 +306,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 224950621992266228, guid: 55c2bda33254a03429f5725b67caacad,
         type: 2}
       propertyPath: m_SizeDelta.x
@@ -370,19 +338,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &547322450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  brain: {fileID: 0}
 --- !u!1001 &581207954
 Prefab:
   m_ObjectHideFlags: 0
@@ -426,7 +381,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (15)
@@ -501,7 +456,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (17)
@@ -610,6 +565,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &785263444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1555600074706450, guid: 25829bba2b739c145ad518d1addd3799,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785263446}
+  - component: {fileID: 785263445}
+  m_Layer: 0
+  m_Name: ShootingBirdsThresholdAcademy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &785263445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114431282000769056, guid: 25829bba2b739c145ad518d1addd3799,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785263444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c740a1edcd5be349bdd88ff6509f83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSteps: 2000
+  trainingConfiguration:
+    width: 320
+    height: 180
+    qualityLevel: 1
+    timeScale: 30
+    targetFrameRate: -1
+  inferenceConfiguration:
+    width: 1280
+    height: 720
+    qualityLevel: 5
+    timeScale: 1
+    targetFrameRate: 1
+  resetParameters:
+    resetParameters: []
+  _log: 0
+--- !u!4 &785263446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4949394345706952, guid: 25829bba2b739c145ad518d1addd3799,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785263444}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &802493486
 Prefab:
   m_ObjectHideFlags: 0
@@ -653,7 +667,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (8)
@@ -728,7 +742,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (13)
@@ -803,7 +817,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (7)
@@ -878,7 +892,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (11)
@@ -953,7 +967,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 224950621992266228, guid: 55c2bda33254a03429f5725b67caacad,
         type: 2}
       propertyPath: m_SizeDelta.x
@@ -985,19 +999,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1135410698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943466ab374444748a364f9d6c3e2fe2, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  brain: {fileID: 0}
 --- !u!1001 &1199156198
 Prefab:
   m_ObjectHideFlags: 0
@@ -1041,7 +1042,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (9)
@@ -1116,7 +1117,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (4)
@@ -1191,7 +1192,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
   m_IsPrefabAsset: 0
@@ -1238,7 +1239,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (5)
@@ -1375,7 +1376,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (3)
@@ -1450,7 +1451,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (14)
@@ -1482,41 +1483,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1839929821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  brain: {fileID: 2097423298}
---- !u!114 &1845785064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  graphModel: {fileID: 4900000, guid: 437de55446a360344b9cbc5f387cb350, type: 3}
-  graphScope: 
-  graphPlaceholders: []
-  BatchSizePlaceholderName: batch_size
-  VectorObservationPlacholderName: vector_observation
-  RecurrentInPlaceholderName: recurrent_in
-  RecurrentOutPlaceholderName: recurrent_out
-  VisualObservationPlaceholderName: []
-  ActionPlaceholderName: action
-  PreviousActionPlaceholderName: prev_action
-  brain: {fileID: 2097423298}
 --- !u!1001 &2044859548
 Prefab:
   m_ObjectHideFlags: 0
@@ -1560,7 +1526,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (1)
@@ -1572,86 +1538,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &2058266845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35813a1be64e144f887d7d5f15b963fa, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  brain: {fileID: 2097423298}
---- !u!1001 &2068995598
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4949394345706952, guid: 25829bba2b739c145ad518d1addd3799, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949394345706952, guid: 25829bba2b739c145ad518d1addd3799, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949394345706952, guid: 25829bba2b739c145ad518d1addd3799, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949394345706952, guid: 25829bba2b739c145ad518d1addd3799, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949394345706952, guid: 25829bba2b739c145ad518d1addd3799, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949394345706952, guid: 25829bba2b739c145ad518d1addd3799, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949394345706952, guid: 25829bba2b739c145ad518d1addd3799, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4949394345706952, guid: 25829bba2b739c145ad518d1addd3799, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114944614757193268, guid: 25829bba2b739c145ad518d1addd3799,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[0]
-      value: 
-      objectReference: {fileID: 307053866}
-    - target: {fileID: 114944614757193268, guid: 25829bba2b739c145ad518d1addd3799,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[1]
-      value: 
-      objectReference: {fileID: 1135410698}
-    - target: {fileID: 114944614757193268, guid: 25829bba2b739c145ad518d1addd3799,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[2]
-      value: 
-      objectReference: {fileID: 1839929821}
-    - target: {fileID: 114944614757193268, guid: 25829bba2b739c145ad518d1addd3799,
-        type: 2}
-      propertyPath: CoreBrains.Array.data[3]
-      value: 
-      objectReference: {fileID: 2139585422}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 25829bba2b739c145ad518d1addd3799, type: 2}
-  m_IsPrefabAsset: 0
---- !u!114 &2097423298 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114944614757193268, guid: 25829bba2b739c145ad518d1addd3799,
-    type: 2}
-  m_PrefabInternal: {fileID: 2068995598}
-  m_Script: {fileID: 11500000, guid: c676a8ddf5a5f4f64b35e9ed5028679d, type: 3}
 --- !u!1001 &2132864749
 Prefab:
   m_ObjectHideFlags: 0
@@ -1695,7 +1581,7 @@ Prefab:
         type: 2}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 2097423298}
+      objectReference: {fileID: 0}
     - target: {fileID: 1105443456518224, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsThresholdEnvironment (2)
@@ -1727,26 +1613,3 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &2139585422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
-  m_Name: (Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
-  m_EditorClassIdentifier: 
-  broadcast: 1
-  graphModel: {fileID: 4900000, guid: 437de55446a360344b9cbc5f387cb350, type: 3}
-  graphScope: 
-  graphPlaceholders: []
-  BatchSizePlaceholderName: batch_size
-  VectorObservationPlacholderName: vector_observation
-  RecurrentInPlaceholderName: recurrent_in
-  RecurrentOutPlaceholderName: recurrent_out
-  VisualObservationPlaceholderName: []
-  ActionPlaceholderName: action
-  PreviousActionPlaceholderName: prev_action
-  brain: {fileID: 2097423298}
