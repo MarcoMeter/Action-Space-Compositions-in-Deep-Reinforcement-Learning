@@ -5,10 +5,10 @@ using UnityEngine;
 /// <summary>
 /// A heuristic for the discrete agent of the multiagent, which shoots whenever it hovers a bird and reloads once the gun is emtpy.
 /// </summary>
-public class ShootingBirdsShootingHeuristic : MonoBehaviour, Decision
+public class ShootingBirdsShootingHeuristic : Decision
 {
     #region Heuristic
-    public float[] Decide(List<float> vectorObs, List<Texture2D> visualObs, float reward, bool done, List<float> memory)
+    public override float[] Decide(List<float> vectorObs, List<Texture2D> visualObs, float reward, bool done, List<float> memory)
     {
         float[] actions = new float[] { 2.0f }; // Default action is to shoot
         // The fourth value of the observation indicates the hovered entity by the agent (1.0f = bird, 0.5f = obstacle, 0.0f = nothing)
@@ -25,7 +25,7 @@ public class ShootingBirdsShootingHeuristic : MonoBehaviour, Decision
         return actions;
     }
 
-    public List<float> MakeMemory(List<float> vectorObs, List<Texture2D> visualObs, float reward, bool done, List<float> memory)
+    public override List<float> MakeMemory(List<float> vectorObs, List<Texture2D> visualObs, float reward, bool done, List<float> memory)
     {
         return new List<float>();
     }

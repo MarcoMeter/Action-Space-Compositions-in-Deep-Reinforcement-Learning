@@ -88,27 +88,6 @@ public class ShootingBirdsShootingAgent : Agent
     }
     #endregion
 
-    #region Unity Lifecycle
-    /// <summary>
-    /// Used for player inputs.
-    /// </summary>
-    private void Update()
-    {
-        if (brain.brainType.Equals(BrainType.Player))
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Shoot();
-            }
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Reload();
-            }
-        }
-    }
-    #endregion
-
     #region Private Functions
     /// <summary>
     /// Shoots at the position of the agent, if enough ammo is left.

@@ -99,19 +99,6 @@ public class ShootingBirdsMovementAgent : Agent
     }
     #endregion
 
-    #region Unity Lifecycle
-    /// <summary>
-    /// Used for player inputs.
-    /// </summary>
-    private void FixedUpdate()
-    {
-        if (brain.brainType.Equals(BrainType.Player))
-        {
-            _rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal") * _movementSpeed, Input.GetAxis("Vertical") * _movementSpeed);
-        }
-    }
-    #endregion
-
     #region Private Functions
     /// <summary>
     /// Fire raycasts to observe the agent's surroundings.

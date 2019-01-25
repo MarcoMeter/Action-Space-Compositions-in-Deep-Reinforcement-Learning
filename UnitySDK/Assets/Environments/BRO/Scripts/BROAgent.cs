@@ -62,28 +62,6 @@ public abstract class BROAgent : Agent
     }
 
     /// <summary>
-    /// Used for player inputs.
-    /// </summary>
-    protected void Update()
-    {
-        if (brain.brainType.Equals(BrainType.Player))
-        {
-            // Agent ("mouse") movement
-            _rigidbody.velocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * _movementSpeed;
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Move();
-            }
-
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                Blink();
-            }
-        }
-    }
-
-    /// <summary>
     /// Constrains the position of the mouse to the pitch's boundaries. Also, it processes the blink's cooldown.
     /// </summary>
     protected void FixedUpdate()

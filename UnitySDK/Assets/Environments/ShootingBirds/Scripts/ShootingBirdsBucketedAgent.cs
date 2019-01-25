@@ -140,38 +140,6 @@ public class ShootingBirdsBucketedAgent : Agent
     }
     #endregion
 
-    #region Unity Lifecycle
-    /// <summary>
-    /// Used for player inputs.
-    /// </summary>
-    private void Update()
-    {
-        if (brain.brainType.Equals(BrainType.Player))
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Shoot();
-            }
-
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Reload();
-            }
-        }
-    }
-
-    /// <summary>
-    /// Used for player inputs.
-    /// </summary>
-    private void FixedUpdate()
-    {
-        if (brain.brainType.Equals(BrainType.Player))
-        {
-            _rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal") * _movementSpeed, Input.GetAxis("Vertical") * _movementSpeed);
-        }
-    }
-    #endregion
-
     #region Private Functions
     /// <summary>
     /// Shoots at the position of the agent, if enough ammo is left.
