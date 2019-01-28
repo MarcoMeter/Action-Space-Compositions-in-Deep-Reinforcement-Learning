@@ -150,7 +150,7 @@ public class ShootingBirdsBucketedAgent : Agent
         {
             _shotCount++;
 
-            Collider2D coll = Physics2D.OverlapPoint((Vector2)transform.position, _layerMaskBird);
+            Collider2D coll = Physics2D.OverlapPoint((Vector2)transform.position, _layerMaskBirdEnv);
             // Check what's been shot
             if (coll && coll.tag.Equals(_BIRD_TAG))
             {
