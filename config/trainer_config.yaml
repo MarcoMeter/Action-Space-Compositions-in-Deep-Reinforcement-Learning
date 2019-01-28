@@ -69,7 +69,7 @@ BROClickBrain:
     time_horizon: 64
     summary_freq: 5000
     
-ShootingBirdsThresholdBrain:
+SBThresholdBrain:
     batch_size: 256
     beta: 5.0e-3
     buffer_size: 1024
@@ -81,7 +81,7 @@ ShootingBirdsThresholdBrain:
     time_horizon: 64
     summary_freq: 5000
 
-ShootingBirdsBucketedBrain:
+SBBucketedBrain:
     batch_size: 96
     beta: 5.0e-3
     buffer_size: 10240
@@ -93,7 +93,7 @@ ShootingBirdsBucketedBrain:
     time_horizon: 64
     summary_freq: 5000
     
-ShootingBirdsMovementBrain:
+SBMovementBrain:
     batch_size: 128
     beta: 5.0e-3
     buffer_size: 1024
@@ -105,7 +105,7 @@ ShootingBirdsMovementBrain:
     time_horizon: 64
     summary_freq: 5000
 
-ShootingBirdsShootingBrain:
+SBClickingBrain:
     batch_size: 48
     beta: 3.0e-3
     buffer_size: 512
