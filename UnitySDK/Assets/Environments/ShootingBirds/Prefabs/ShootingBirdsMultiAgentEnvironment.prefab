@@ -577,7 +577,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 1
+  m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -1736,7 +1736,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 125.3, y: -153.39998}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 304, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224245591540729622
 RectTransform:
@@ -1754,7 +1754,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 126.70005, y: 20.220064}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 7, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224288239542497648
 RectTransform:
@@ -1794,7 +1794,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 35.3, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 193, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224519698960911454
 RectTransform:
@@ -1812,7 +1812,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 55.600037, y: 20.220064}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 7, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224611477099731052
 RectTransform:
@@ -1830,7 +1830,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -357.28, y: 128.2}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 141, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224999682606670768
 RectTransform:
@@ -1848,5 +1848,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -8.7, y: -22.8}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 104, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}

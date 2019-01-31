@@ -181,8 +181,8 @@ public class ShootingBirdsThresholdAgent : Agent
             AddReward(-1f);
         }
         // Update UI
-        _accuracyText.text = "Shot Accuracy: " + ((float)_hitCount / (float)_shotCount).ToString("0.00");
-        _ammoText.text = "Ammo: " + _leftAmmo + " / " + _maxAmmo;
+        //_accuracyText.text = "Shot Accuracy: " + ((float)_hitCount / (float)_shotCount).ToString("0.00");
+        //_ammoText.text = "Ammo: " + _leftAmmo + " / " + _maxAmmo;
     }
 
     /// <summary>
@@ -202,7 +202,7 @@ public class ShootingBirdsThresholdAgent : Agent
         }
         _leftAmmo = _maxAmmo;
         // Update UI
-        _ammoText.text = "Ammo: " + _leftAmmo + " / " + _maxAmmo;
+        //_ammoText.text = "Ammo: " + _leftAmmo + " / " + _maxAmmo;
     }
 
     /// <summary>
