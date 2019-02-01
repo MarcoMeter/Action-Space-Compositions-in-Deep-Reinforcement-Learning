@@ -430,7 +430,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1993822235682618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.7, y: 8.26, z: -10}
+  m_LocalPosition: {x: -19.7, y: 8.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4066561042100650}
@@ -469,7 +469,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451815587990910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.6, y: -8.48, z: -10}
+  m_LocalPosition: {x: 19.6, y: -8.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4066561042100650}
@@ -1508,7 +1508,6 @@ MonoBehaviour:
     type: 2}
   _leftTopSpawnIndicatior: {fileID: 4248309655043824}
   _rightBottomIndicator: {fileID: 4467419976676956}
-  _birdPoolSize: 50
   _birdPoolParent: {fileID: 1194233240737846}
   _allowPoolGrowth: 1
 --- !u!124 &124885166525985914

@@ -16,11 +16,10 @@ public class ShootingBirdsEnvironment : MonoBehaviour
     private Transform _rightBottomIndicator;
     private int _initialSpawnCount = 10;
     private int _spawnRate = 1;
-    private float _spawnInterval = 0.5f;
-
+    private float _spawnInterval = 0.45f;
+    // Bird pool
     private List<GameObject> _birdPool = new List<GameObject>();
-    [SerializeField]
-    private int _birdPoolSize = 50;
+    private int _birdPoolSize = 35;
     [SerializeField]
     private GameObject _birdPoolParent;
     [SerializeField]
@@ -54,6 +53,10 @@ public class ShootingBirdsEnvironment : MonoBehaviour
     #endregion
 
     #region Private Functions
+    /// <summary>
+    /// Selects an inactive bird from the pool.
+    /// </summary>
+    /// <returns>An inactive bird GameObject</returns>
     private GameObject GetBird()
     {
         foreach(var bird in _birdPool)
@@ -63,6 +66,8 @@ public class ShootingBirdsEnvironment : MonoBehaviour
                 return bird;
             }
         }
+
+        // Add a new bird if not enough birds are available
         if (_allowPoolGrowth)
         {
             GameObject newBird = Instantiate(_birdPrefab, _birdPoolParent.transform);

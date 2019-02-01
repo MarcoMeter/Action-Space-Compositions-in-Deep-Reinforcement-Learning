@@ -14,8 +14,8 @@ public class BirdBehavior : MonoBehaviour
     private Vector3 _sizeS = new Vector3(0.2f, 0.2f, 1.0f);
     private Vector3 _sizeM = new Vector3(0.4f, 0.4f, 1.0f);
     private Vector3 _sizeL = new Vector3(0.6f, 0.6f, 1.0f);
-    private float _lifespan = 15.0f;
     private float _movementShift;
+    private float _aliveRange = 20.0f;
     #endregion
 
     #region Member Properties
@@ -40,6 +40,9 @@ public class BirdBehavior : MonoBehaviour
     private void FixedUpdate()
     {
         _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, Mathf.Sin(Time.time * 2.0f + _movementShift));
+
+        if (Mathf.Abs(transform.localPosition.x) > _aliveRange)
+            KillBird();
     }
     #endregion
 
@@ -76,9 +79,6 @@ public class BirdBehavior : MonoBehaviour
 
         // Apply velocity
         _rigidbody.velocity = (Vector2)(transform.right * speed);
-
-        // Kill the bird after a certain amount of time
-        Invoke("KillBird", _lifespan);
     }
 
     /// <summary>
@@ -97,7 +97,6 @@ public class BirdBehavior : MonoBehaviour
     /// </summary>
     private void KillBird()
     {
-        CancelInvoke(); // If the bird is killed by the player, make sure that any further invocations are cancelled to avoid NullRefs.
         gameObject.SetActive(false);
     }
     #endregion
