@@ -99,18 +99,15 @@ public class ShootingBirdsThresholdAgent : Agent
     {
         if (brain.brainParameters.vectorActionSpaceType.Equals(SpaceType.continuous))
         {
-            // Move
-            _rigidbody.velocity = new Vector2(vectorAction[0], vectorAction[1]).normalized * _movementSpeed;
-            //// Unit circle locomotion: first action determines the angle (direction), the second one the speed
-            //// Process the action
-            //float angle = vectorAction[0] * 90;
-            //// Retrieve position form unit circle
-            //Vector3 circumferencePoint = new Vector3((Mathf.Cos(angle * Mathf.Deg2Rad)),
-            //                                        (Mathf.Sin(angle * Mathf.Deg2Rad)),
-            //                                        0);
-            //// Apply velocity based on direction (coming from the unit circle)
-            //_rigidbody.velocity = circumferencePoint.normalized * vectorAction[1] * _movementSpeed;
-
+            // Unit circle locomotion: first action determines the angle (direction), the second one the speed
+            // Process the action
+            float angle = vectorAction[0] * 90;
+            // Retrieve position form unit circle
+            Vector3 circumferencePoint = new Vector3((Mathf.Cos(angle * Mathf.Deg2Rad)),
+                                                    (Mathf.Sin(angle * Mathf.Deg2Rad)),
+                                                    0);
+            // Apply velocity based on direction (coming from the unit circle)
+            _rigidbody.velocity = circumferencePoint.normalized * vectorAction[1] * _movementSpeed;
 
             // Shoot
             if (Mathf.Abs(vectorAction[2]) < _discreteActionThreshold)
@@ -194,7 +191,7 @@ public class ShootingBirdsThresholdAgent : Agent
         // Punish the agent for reloading if it has ammo left
         if(_leftAmmo > 0)
         {
-            AddReward(-0.1f);
+            AddReward((_leftAmmo / _maxAmmo) * -1.0f);
         }
         else
         {

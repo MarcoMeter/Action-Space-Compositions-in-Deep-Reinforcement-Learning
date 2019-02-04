@@ -114,16 +114,18 @@ public class ShootingBirdsBucketedAgent : Agent
     /// </summary>
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        // Movement
-        Vector2 newVelocity = Vector2.zero;
-        // Horizontal
-        newVelocity.x = _movementBuckets[(int)vectorAction[0]] * _movementSpeed;
-        // Vertical
-        newVelocity.y = _movementBuckets[(int)vectorAction[1]] * _movementSpeed;
-        _rigidbody.velocity = newVelocity;
+        // Unit circle locomotion: first action determines the angle (direction), the second one the speed
+        // Process the action
+        float angle = _movementBuckets[(int)vectorAction[0]] * 90;
+        // Retrieve position form unit circle
+        Vector3 circumferencePoint = new Vector3((Mathf.Cos(angle * Mathf.Deg2Rad)),
+                                                (Mathf.Sin(angle * Mathf.Deg2Rad)),
+                                                0);
+        // Apply velocity based on direction (coming from the unit circle)
+        _rigidbody.velocity = circumferencePoint.normalized * _movementBuckets[(int)vectorAction[1]] * _movementSpeed;
 
         // Shoot or reload
-        if((int)vectorAction[2] == 0)
+        if ((int)vectorAction[2] == 0)
         {
             Shoot();
         }
@@ -134,8 +136,8 @@ public class ShootingBirdsBucketedAgent : Agent
 
         // Update speed UI
         _stepDevisor++;
-        _sumVelocityX += Math.Abs(newVelocity.x);
-        _sumVelocityY += Math.Abs(newVelocity.y);
+        _sumVelocityX += Math.Abs(_rigidbody.velocity.x);
+        _sumVelocityY += Math.Abs(_rigidbody.velocity.y);
         _averageVelocityText.text = "|Average speed|: " + (_sumVelocityX / _stepDevisor).ToString("0.00") + " | " + (_sumVelocityY / _stepDevisor).ToString("0.00");
     }
     #endregion
