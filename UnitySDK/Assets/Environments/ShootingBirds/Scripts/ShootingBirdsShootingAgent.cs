@@ -41,7 +41,7 @@ public class ShootingBirdsShootingAgent : Agent
     public override void AgentReset()
     {
         _hitCount = _shotCount = _reloads = _reloadsOnEmpty = 0;
-        _leftAmmo = _maxAmmo;
+        _leftAmmo = UnityEngine.Random.Range(1, _maxAmmo);
     }
 
     /// <summary>

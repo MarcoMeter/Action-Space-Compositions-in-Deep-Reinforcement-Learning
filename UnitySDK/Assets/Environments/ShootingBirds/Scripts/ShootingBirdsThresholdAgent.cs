@@ -68,7 +68,7 @@ public class ShootingBirdsThresholdAgent : Agent
     {
         transform.position = _origin;
         _hitCount = _shotCount = _reloads = _reloadsOnEmpty = 0;
-        _leftAmmo = _maxAmmo;
+        _leftAmmo = UnityEngine.Random.Range(1, _maxAmmo);
         _sumVelocityX = 0.0f;
         _sumVelocityY = 0.0f;
         _stepDevisor = 0;
@@ -101,7 +101,7 @@ public class ShootingBirdsThresholdAgent : Agent
         {
             // Move
             _rigidbody.velocity = new Vector2(vectorAction[0], vectorAction[1]).normalized * _movementSpeed;
-            //// Unit circlle locomotion: first action determines the angle (direction), the second one the speed
+            //// Unit circle locomotion: first action determines the angle (direction), the second one the speed
             //// Process the action
             //float angle = vectorAction[0] * 90;
             //// Retrieve position form unit circle

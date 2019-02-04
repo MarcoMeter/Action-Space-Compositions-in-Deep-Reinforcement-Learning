@@ -85,7 +85,7 @@ public class ShootingBirdsBucketedAgent : Agent
     {
         transform.position = _origin;
         _hitCount = _shotCount = _reloads = _reloadsOnEmpty = 0;
-        _leftAmmo = _maxAmmo;
+        _leftAmmo = UnityEngine.Random.Range(1, _maxAmmo);
         _sumVelocityX = 0.0f;
         _sumVelocityY = 0.0f;
         _stepDevisor = 0;
