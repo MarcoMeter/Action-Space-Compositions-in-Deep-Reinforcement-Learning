@@ -6,6 +6,7 @@
 public class BirdBehavior : MonoBehaviour
 {
     #region Member Fields
+    private ShootingBirdsEnvironment _environment;
     [SerializeField]
     private Rigidbody2D _rigidbody;
     [SerializeField]
@@ -53,8 +54,9 @@ public class BirdBehavior : MonoBehaviour
     /// <param name="size">Size of the bird</param>
     /// <param name="speed">Moving speed of the bird</param>
     /// <param name="flipped">Determines the direction, if false direction is positive x</param>
-    public void Init(BirdSize size, float speed, bool flipped)
+    public void Init(ShootingBirdsEnvironment env, BirdSize size, float speed, bool flipped)
     {
+        _environment = env;
         _size = size;
 
         // Set scale
@@ -98,6 +100,7 @@ public class BirdBehavior : MonoBehaviour
     private void KillBird()
     {
         gameObject.SetActive(false);
+        _environment.Spawn();
     }
     #endregion
 }

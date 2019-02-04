@@ -14,12 +14,10 @@ public class ShootingBirdsEnvironment : MonoBehaviour
     private Transform _leftTopSpawnIndicatior;
     [SerializeField]
     private Transform _rightBottomIndicator;
-    private int _initialSpawnCount = 10;
-    private int _spawnRate = 1;
-    private float _spawnInterval = 0.45f;
+    private int _initialSpawnCount = 15;
     // Bird pool
     private List<GameObject> _birdPool = new List<GameObject>();
-    private int _birdPoolSize = 35;
+    private int _birdPoolSize = 20;
     [SerializeField]
     private GameObject _birdPoolParent;
     [SerializeField]
@@ -28,64 +26,25 @@ public class ShootingBirdsEnvironment : MonoBehaviour
 
     #region Unity Lifecycle
     /// <summary>
-    /// Initially spawns a certain number of birds to begin with. Triggers the invocation of further spawns.
+    /// Initially spawns a certain number of birds to begin with.
     /// </summary>
     private void Start()
     {
-        // Initialize Bird Pool
-        for(int i = 0; i < _birdPoolSize; i++)
-        {
-            GameObject bird = Instantiate(_birdPrefab, _birdPoolParent.transform);
-            bird.transform.rotation = Quaternion.identity;
-            bird.SetActive(false);
-            _birdPool.Add(bird);
-        }
+        InitBirdPool();
 
-        // Initial spawn
+        // Spawn initial birds
         for (int i = 0; i < _initialSpawnCount; i++)
         {
             Spawn();
         }
-
-        // Continues spawns
-        InvokeRepeating("SpawnWave", _spawnInterval, _spawnInterval);
     }
     #endregion
 
-    #region Private Functions
-    /// <summary>
-    /// Selects an inactive bird from the pool.
-    /// </summary>
-    /// <returns>An inactive bird GameObject</returns>
-    private GameObject GetBird()
-    {
-        foreach(var bird in _birdPool)
-        {
-            if(!bird.activeInHierarchy)
-            {
-                return bird;
-            }
-        }
-
-        // Add a new bird if not enough birds are available
-        if (_allowPoolGrowth)
-        {
-            GameObject newBird = Instantiate(_birdPrefab, _birdPoolParent.transform);
-            newBird.transform.rotation = Quaternion.identity;
-            newBird.SetActive(false);
-            _birdPool.Add(newBird);
-            return newBird;
-        }
-        else
-        {
-            return null;
-        }
-    }
-
+    #region Public Functions
     /// <summary>
     /// Spawns a single bird.
     /// </summary>
-    private void Spawn()
+    public void Spawn()
     {
         // Spawn position (x,y)
         // Decide on spawn site
@@ -116,18 +75,52 @@ public class ShootingBirdsEnvironment : MonoBehaviour
 
             // Initialize bird behavior
             var speed = Random.Range(1.5f, 6f);
-            birdBehavior.Init((BirdSize)size, speed, spawnSite != 0);
+            birdBehavior.Init(this, (BirdSize)size, speed, spawnSite != 0);
+        }
+    }
+    #endregion
+
+    #region Private Functions
+    /// <summary>
+    /// Initializes the bird pool by instantiating birds and setting them as inactive.
+    /// </summary>
+    private void InitBirdPool()
+    {
+        for (int i = 0; i < _birdPoolSize; i++)
+        {
+            GameObject bird = Instantiate(_birdPrefab, _birdPoolParent.transform);
+            bird.transform.rotation = Quaternion.identity;
+            bird.SetActive(false);
+            _birdPool.Add(bird);
         }
     }
 
     /// <summary>
-    /// Spawns a wave of birds for each interval.
+    /// Selects an inactive bird from the pool.
     /// </summary>
-    private void SpawnWave()
+    /// <returns>An inactive bird GameObject</returns>
+    private GameObject GetBird()
     {
-        for (int i = 0; i < _spawnRate; i++)
+        foreach(var bird in _birdPool)
         {
-            Spawn();
+            if(!bird.activeInHierarchy)
+            {
+                return bird;
+            }
+        }
+
+        // Add a new bird if not enough birds are available
+        if (_allowPoolGrowth)
+        {
+            GameObject newBird = Instantiate(_birdPrefab, _birdPoolParent.transform);
+            newBird.transform.rotation = Quaternion.identity;
+            newBird.SetActive(false);
+            _birdPool.Add(newBird);
+            return newBird;
+        }
+        else
+        {
+            return null;
         }
     }
     #endregion
