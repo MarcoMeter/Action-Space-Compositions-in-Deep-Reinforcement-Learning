@@ -14,7 +14,7 @@ public class ShootingBirdsEnvironment : MonoBehaviour
     private Transform _leftTopSpawnIndicatior;
     [SerializeField]
     private Transform _rightBottomIndicator;
-    private int _initialSpawnCount = 15;
+    private int _initialSpawnCount = 10;
     // Bird pool
     private List<GameObject> _birdPool = new List<GameObject>();
     private int _birdPoolSize = 20;

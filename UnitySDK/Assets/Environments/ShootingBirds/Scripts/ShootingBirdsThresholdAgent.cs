@@ -32,7 +32,7 @@ public class ShootingBirdsThresholdAgent : Agent
     [SerializeField]
     private Rigidbody2D _rigidbody;
     [SerializeField]
-    private float _movementSpeed = 10.0f;
+    private float _movementSpeed = 50.0f;
     [SerializeField]
     private int _maxAmmo = 8;
     [SerializeField]
@@ -79,17 +79,21 @@ public class ShootingBirdsThresholdAgent : Agent
     /// </summary>
     public override void CollectObservations()
     {
+        // Is the gun loaded?
+        AddVectorObs((_leftAmmo > 0));                                  // 1
         // Remaining ammunation
-        AddVectorObs(_leftAmmo / _maxAmmo);                         // 1
+        AddVectorObs(_leftAmmo / _maxAmmo);                             // 1
         // Relative position to the origin
-        AddVectorObs((transform.position.x - _origin.x) / 17.715f); // 1
-        AddVectorObs((transform.position.y - _origin.y) / 10.215f); // 1
-        // Velocity of the agent
-        AddVectorObs(_rigidbody.velocity.normalized);               // 2
+        AddVectorObs((transform.position.x - _origin.x) / 17.715f);     // 1
+        AddVectorObs((transform.position.y - _origin.y) / 10.215f);     // 1
+        // Velocity of the agent (i.e. direction)
+        AddVectorObs(_rigidbody.velocity.normalized);                   // 2
+        // Speed of the agent
+        AddVectorObs(_rigidbody.velocity.magnitude / _movementSpeed);   // 1
         // Distances to spotted birds (-1.0 if nothing is spotted)
-        AddVectorObs(SenseSurroundings());                          // 24 (numVisionRays)
+        AddVectorObs(SenseSurroundings());                              // 24 (numVisionRays)
         // Check what's being hovered
-        AddVectorObs(SenseHoveredEntity());
+        AddVectorObs(SenseHoveredEntity());                             // 1
     }
 
     /// <summary>

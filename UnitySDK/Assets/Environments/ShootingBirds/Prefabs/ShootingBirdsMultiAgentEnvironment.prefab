@@ -1441,6 +1441,7 @@ MonoBehaviour:
   _rigidbody: {fileID: 50016675101199944}
   _maxAmmo: 8
   _infinteAmmo: 0
+  _movementSpeed: 50
   _layerMaskBird:
     serializedVersion: 2
     m_Bits: 16384

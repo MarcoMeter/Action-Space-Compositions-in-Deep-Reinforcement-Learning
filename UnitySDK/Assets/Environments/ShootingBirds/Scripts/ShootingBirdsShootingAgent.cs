@@ -27,6 +27,8 @@ public class ShootingBirdsShootingAgent : Agent
     private int _maxAmmo = 8;
     [SerializeField]
     private bool _infinteAmmo = true;
+    [SerializeField]
+    private float _movementSpeed = 50.0f;
     [Header("State Space")]
     [SerializeField]
     private LayerMask _layerMaskBird;
@@ -49,17 +51,21 @@ public class ShootingBirdsShootingAgent : Agent
     /// </summary>
     public override void CollectObservations()
     {
-        // Relative position to the origin
-        AddVectorObs((transform.position.x - _movementAgent.Origin.x) / 17.715f); // 1
-        AddVectorObs((transform.position.y - _movementAgent.Origin.y) / 10.215f); // 1
+        // Is the gun loaded?
+        AddVectorObs((_leftAmmo > 0));                                              // 1
         // Remaining ammunation
-        AddVectorObs(_leftAmmo / _maxAmmo);                         // 1
-        // Velocity of the agent
-        AddVectorObs(_rigidbody.velocity.normalized);               // 2
-                                                                    // Distances to spotted birds (-1.0 if nothing is spotted)
-        AddVectorObs(_movementAgent.SenseSurroundings());                          // 24 (numVisionRays)
+        AddVectorObs(_leftAmmo / _maxAmmo);                                         // 1
+        // Relative position to the origin
+        AddVectorObs((transform.position.x - _movementAgent.Origin.x) / 17.715f);   // 1
+        AddVectorObs((transform.position.y - _movementAgent.Origin.y) / 10.215f);   // 1
+        // Velocity of the agent (i.e. direction)
+        AddVectorObs(_rigidbody.velocity.normalized);                               // 2
+        // Speed of the agent
+        AddVectorObs(_rigidbody.velocity.magnitude / _movementSpeed);               // 1
+        // Distances to spotted birds (-1.0 if nothing is spotted)
+        AddVectorObs(_movementAgent.SenseSurroundings());                           // 24 (numVisionRays)
         // Check what's being hovered
-        AddVectorObs(SenseHoveredEntity());                         // 1
+        AddVectorObs(SenseHoveredEntity());                                         // 1
     }
 
     /// <summary>
@@ -153,7 +159,7 @@ public class ShootingBirdsShootingAgent : Agent
         // Punish the agent for reloading if it has ammo left
         if (_leftAmmo > 0)
         {
-            AddReward(-0.1f);
+            AddReward((_leftAmmo / _maxAmmo) * -1.0f);
         }
         else
         {
