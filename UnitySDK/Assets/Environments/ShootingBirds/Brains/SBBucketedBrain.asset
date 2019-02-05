@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: SBBucketedBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 30
+    vectorObservationSize: 32
     numStackedVectorObservations: 1
     vectorActionSize: 070000000700000003000000
     cameraResolutions: []

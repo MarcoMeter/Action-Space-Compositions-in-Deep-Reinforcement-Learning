@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: SBMovementBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 29
+    vectorObservationSize: 30
     numStackedVectorObservations: 1
     vectorActionSize: 02000000
     cameraResolutions: []
