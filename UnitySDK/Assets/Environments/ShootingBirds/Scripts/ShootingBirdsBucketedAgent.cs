@@ -41,10 +41,10 @@ public class ShootingBirdsBucketedAgent : Agent
     //                                               0.8f, 0.9f, 1.0f};
 
     // 11 Actions
-    //private float[] _movementBuckets = new float[] {-1.0f, -0.8f, -0.6f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 0.6f, 0.8f, 1.0f};
+    private float[] _movementBuckets = new float[] {-1.0f, -0.8f, -0.6f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 0.6f, 0.8f, 1.0f};
 
     // 7 Actions
-    private float[] _movementBuckets = new float[] { -1.0f, -0.5f, -0.1f, 0.0f, 0.1f, 0.5f, 1.0f };
+    //private float[] _movementBuckets = new float[] { -1.0f, -0.5f, -0.1f, 0.0f, 0.1f, 0.5f, 1.0f };
     [SerializeField]
     private int _maxAmmo = 8;
     [SerializeField]
@@ -166,10 +166,10 @@ public class ShootingBirdsBucketedAgent : Agent
                 switch (bird.BirdSize)
                 {
                     case BirdSize.S:
-                        AddReward(1.0f);
+                        AddReward(2.0f);
                         break;
                     case BirdSize.M:
-                        AddReward(0.5f);
+                        AddReward(0.75f);
                         break;
                     case BirdSize.L:
                         AddReward(0.25f);

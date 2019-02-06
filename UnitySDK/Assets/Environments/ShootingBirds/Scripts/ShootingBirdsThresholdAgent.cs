@@ -150,13 +150,13 @@ public class ShootingBirdsThresholdAgent : Agent
                 BirdBehavior bird = coll.GetComponent<BirdBehavior>();
                 bird.Hit();
                 // Reward the agent for hitting a bird based on the bird's size
-                switch(bird.BirdSize)
+                switch (bird.BirdSize)
                 {
                     case BirdSize.S:
-                        AddReward(1.0f);
+                        AddReward(2.0f);
                         break;
                     case BirdSize.M:
-                        AddReward(0.5f);
+                        AddReward(0.75f);
                         break;
                     case BirdSize.L:
                         AddReward(0.25f);

@@ -114,12 +114,12 @@ public class ShootingBirdsShootingAgent : Agent
                 switch (bird.BirdSize)
                 {
                     case BirdSize.S:
-                        AddReward(1.0f);
-                        _movementAgent.AddReward(1.0f);
+                        AddReward(2.0f);
+                        _movementAgent.AddReward(2.0f);
                         break;
                     case BirdSize.M:
-                        AddReward(0.5f);
-                        _movementAgent.AddReward(0.5f);
+                        AddReward(0.75f);
+                        _movementAgent.AddReward(0.75f);
                         break;
                     case BirdSize.L:
                         AddReward(0.25f);
