@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4089600697380874}
   - component: {fileID: 61737324520582192}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ColliderRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4897810247832132}
   - component: {fileID: 61519593149146238}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ColliderBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4871090922493478}
   - component: {fileID: 61993708478831666}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ColliderTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4647802809506962}
   - component: {fileID: 61699959260453246}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ColliderLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1239,7 +1239,6 @@ MonoBehaviour:
   _accuracyText: {fileID: 114701689889961200}
   _ammoText: {fileID: 114941330200617056}
   _averageVelocityText: {fileID: 114610261170421542}
-  _discreteActionThreshold: 0.33
   _rigidbody: {fileID: 50704241613107332}
   _movementSpeed: 50
   _maxAmmo: 8
@@ -1249,9 +1248,13 @@ MonoBehaviour:
   _layerMaskBird:
     serializedVersion: 2
     m_Bits: 16384
+  _layerMaskEnv:
+    serializedVersion: 2
+    m_Bits: 0
   _layerMaskBirdEnv:
     serializedVersion: 2
     m_Bits: 49152
+  _discreteActionThreshold: 0.33
 --- !u!114 &114449197098050924
 MonoBehaviour:
   m_ObjectHideFlags: 1

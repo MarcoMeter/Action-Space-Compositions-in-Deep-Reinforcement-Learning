@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4843919977812332}
   - component: {fileID: 61712899949143184}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ColliderLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4614318483800532}
   - component: {fileID: 61240216059787880}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ColliderTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4533203570960914}
   - component: {fileID: 61295551312137182}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ColliderBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4505803599857740}
   - component: {fileID: 61299873363985766}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ColliderRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1406,14 +1406,21 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
+  _accuracyText: {fileID: 0}
+  _ammoText: {fileID: 0}
   _averageVelocityText: {fileID: 114623010499962742}
   _rigidbody: {fileID: 50016675101199944}
   _movementSpeed: 50
+  _maxAmmo: 8
+  _infinteAmmo: 0
   _numVisionRays: 24
   _visionRayLength: 14
   _layerMaskBird:
     serializedVersion: 2
     m_Bits: 16384
+  _layerMaskEnv:
+    serializedVersion: 2
+    m_Bits: 0
   _layerMaskBirdEnv:
     serializedVersion: 2
     m_Bits: 49152
@@ -1435,16 +1442,21 @@ MonoBehaviour:
     resetOnDone: 1
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 1
-  _movementAgent: {fileID: 114706940298677948}
   _accuracyText: {fileID: 114479418397472674}
   _ammoText: {fileID: 114702834005401224}
+  _averageVelocityText: {fileID: 0}
   _rigidbody: {fileID: 50016675101199944}
+  _movementSpeed: 50
   _maxAmmo: 8
   _infinteAmmo: 0
-  _movementSpeed: 50
+  _numVisionRays: 24
+  _visionRayLength: 14
   _layerMaskBird:
     serializedVersion: 2
     m_Bits: 16384
+  _layerMaskEnv:
+    serializedVersion: 2
+    m_Bits: 0
   _layerMaskBirdEnv:
     serializedVersion: 2
     m_Bits: 49152
