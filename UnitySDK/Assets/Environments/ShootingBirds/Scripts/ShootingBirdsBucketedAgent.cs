@@ -242,12 +242,28 @@ public class ShootingBirdsBucketedAgent : Agent
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, _visionRayLength, _layerMaskBird);
             if (hit)
             {
+                // Add distance
                 observation.Add(hit.distance / _visionRayLength);
+
+                // Add one hot encoded bird type
+                switch(hit.transform.GetComponent<BirdBehavior>().BirdSize)
+                {
+                    case BirdSize.S:
+                        observation.AddRange(new float[] { 1.0f, 0.0f, 0.0f });
+                        break;
+                    case BirdSize.M:
+                        observation.AddRange(new float[] { 0.0f, 1.0f, 0.0f });
+                        break;
+                    case BirdSize.L:
+                        observation.AddRange(new float[] { 0.0f, 0.0f, 1.0f });
+                        break;
+                }
             }
             else
             {
                 // if no bird is spotted
                 observation.Add(-1.0f);
+                observation.AddRange(new float[] { 0.0f, 0.0f, 0.0f });
             }
 
             Debug.DrawLine(ray.origin, ray.origin + ray.direction * _visionRayLength, Color.red, 0.0f); // Check correct behavior of raycasts
