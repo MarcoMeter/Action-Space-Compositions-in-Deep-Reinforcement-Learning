@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4089600697380874}
   - component: {fileID: 61737324520582192}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ColliderRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4897810247832132}
   - component: {fileID: 61519593149146238}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ColliderBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4871090922493478}
   - component: {fileID: 61993708478831666}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ColliderTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4647802809506962}
   - component: {fileID: 61699959260453246}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ColliderLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1713,7 +1713,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 125.3, y: -153.4}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 304, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224274624007335030
 RectTransform:
@@ -1753,7 +1753,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -339.6, y: 128.51}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 199, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224713903634137238
 RectTransform:
@@ -1771,7 +1771,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 35.3, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 193, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224777045795672564
 RectTransform:
@@ -1789,7 +1789,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 55.600037, y: 20.220064}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 7, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224912770777038712
 RectTransform:
@@ -1807,7 +1807,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 126.70005, y: 20.220064}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 7, y: 16}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224950621992266228
 RectTransform:
@@ -1825,5 +1825,5 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -8.7, y: -22.8}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 104, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
