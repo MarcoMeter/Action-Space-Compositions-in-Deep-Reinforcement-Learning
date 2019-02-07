@@ -1467,6 +1467,9 @@ MonoBehaviour:
   _layerMaskBird:
     serializedVersion: 2
     m_Bits: 16384
+  _layerMaskEnv:
+    serializedVersion: 2
+    m_Bits: 32768
   _layerMaskBirdEnv:
     serializedVersion: 2
     m_Bits: 49152

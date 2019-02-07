@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Environments/ShootingBirds/Scenes/MultiagentSB.unity
-    guid: 61f428406f1c3d44a941adfdc7fb396d
+    path: Assets/Environments/ShootingBirds/Scenes/BucketedSB.unity
+    guid: e528e206d4d2a474b96421273ca31de5
   m_configObjects: {}
