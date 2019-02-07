@@ -10,7 +10,8 @@ public class ShootingBirdsAgent : Agent
     private ShootingBirdsEnvironment _environment;
     private const string _BIRD_TAG = "Bird";
     private const string _ENV_TAG = "Environment";
-    private int _leftAmmo = 8;
+    [SerializeField]
+    private GameObject[] _obstacleSzenarios;
     protected Vector3 _origin;
     [Header("UI")]
     [SerializeField]
@@ -33,6 +34,7 @@ public class ShootingBirdsAgent : Agent
     protected float _movementSpeed = 50.0f;
     [SerializeField]
     private int _maxAmmo = 8;
+    private int _leftAmmo = 8;
     [SerializeField]
     private bool _infinteAmmo = false;
     [Header("State Space")]
@@ -72,7 +74,12 @@ public class ShootingBirdsAgent : Agent
             UnityEngine.Random.Range(_origin.y - 10, _origin.y + 10),
             _origin.z);
         _leftAmmo = UnityEngine.Random.Range(1, _maxAmmo);
-        // Randomize obstacles (TODO)
+        // Activate obstacles
+        foreach (var go in _obstacleSzenarios)
+        {
+            go.SetActive(false);
+        }
+        _obstacleSzenarios[UnityEngine.Random.Range(0, _obstacleSzenarios.Length)].SetActive(true);
 
         // Reset data holders
         _hitCount = _shotCount = _reloads = _reloadsOnEmpty = 0;
