@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: SBBucketedBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 128
-    numStackedVectorObservations: 4
+    vectorObservationSize: 44
+    numStackedVectorObservations: 3
     vectorActionSize: 0b0000000b00000003000000
     cameraResolutions: []
     vectorActionDescriptions:
@@ -21,4 +21,4 @@ MonoBehaviour:
     - Vertical movement
     - Shoot, Reload, Nothing
     vectorActionSpaceType: 0
-  model: {fileID: 4900000, guid: 8276269e765d3d64b81098ad26527ea7, type: 3}
+  model: {fileID: 0}

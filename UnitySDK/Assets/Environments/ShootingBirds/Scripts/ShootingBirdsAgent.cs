@@ -105,7 +105,7 @@ public class ShootingBirdsAgent : Agent
         // Speed of the agent
         AddVectorObs(_rigidbody.velocity.magnitude / _movementSpeed);   // 1
         // Distances to spotted birds (-1.0 if nothing is spotted)
-        AddVectorObs(SenseSurroundings());                              // 5 * 24 (numVisionRays)
+        AddVectorObs(SenseSurroundings());                              // 3 * 12 (numVisionRays)
         // Check what's being hovered
         AddVectorObs(SenseHoveredEntity());                             // 1
     }
@@ -223,25 +223,25 @@ public class ShootingBirdsAgent : Agent
                 // Add distance
                 observation.Add(birdHit.distance / _visionRayLength);
 
-                // Add one hot encoded bird type
+                // Add bird type
                 switch (birdHit.transform.GetComponent<BirdBehavior>().BirdSize)
                 {
                     case BirdSize.S:
-                        observation.AddRange(new float[] { 1.0f, 0.0f, 0.0f }); // Alternative encoding: -1, 0, +1
+                        observation.Add(1.0f);
                         break;
                     case BirdSize.M:
-                        observation.AddRange(new float[] { 0.0f, 1.0f, 0.0f });
+                        observation.Add(0.5f);
                         break;
                     case BirdSize.L:
-                        observation.AddRange(new float[] { 0.0f, 0.0f, 1.0f });
+                        observation.Add(0.0f);
                         break;
                 }
             }
             else
             {
                 // if no bird is spotted
-                observation.Add(-1.0f);
-                observation.AddRange(new float[] { 0.0f, 0.0f, 0.0f });
+                observation.Add(-1.0f); // distance
+                observation.Add(-1.0f); // bird type
             }
 
             // Perceive obstacles

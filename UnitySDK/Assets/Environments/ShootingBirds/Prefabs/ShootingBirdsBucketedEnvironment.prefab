@@ -742,7 +742,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126819400535462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -133.9, y: 103.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4628026625549226}
@@ -3368,7 +3368,7 @@ MonoBehaviour:
   _movementSpeed: 50
   _maxAmmo: 8
   _infinteAmmo: 0
-  _numVisionRays: 24
+  _numVisionRays: 12
   _visionRayLength: 14
   _layerMaskBird:
     serializedVersion: 2
