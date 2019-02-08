@@ -185,7 +185,7 @@ public class ShootingBirdsAgent : Agent
         // Proportionally punish the agent for reloading if it has ammo left
         if (_leftAmmo > 0)
         {
-            AddReward((_leftAmmo / _maxAmmo) * -1.0f);
+            AddReward(((float)_leftAmmo / (float)_maxAmmo) * -1.0f);
         }
         else
         {
