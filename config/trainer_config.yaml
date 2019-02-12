@@ -87,7 +87,7 @@ SBBucketedBrain:
     buffer_size: 4096
     hidden_units: 140
     learning_rate: 3.25e-4
-    max_steps: 5.0e5
+    max_steps: 2.0e6
     num_epoch: 4
     num_layers: 2
     time_horizon: 48
