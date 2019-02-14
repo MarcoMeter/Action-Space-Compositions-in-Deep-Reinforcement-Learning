@@ -1459,16 +1459,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 224912770777038712, guid: 55c2bda33254a03429f5725b67caacad,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224912770777038712, guid: 55c2bda33254a03429f5725b67caacad,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 224777045795672564, guid: 55c2bda33254a03429f5725b67caacad,
         type: 2}
       propertyPath: m_SizeDelta.x
@@ -1479,12 +1469,12 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224950621992266228, guid: 55c2bda33254a03429f5725b67caacad,
+    - target: {fileID: 224912770777038712, guid: 55c2bda33254a03429f5725b67caacad,
         type: 2}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224950621992266228, guid: 55c2bda33254a03429f5725b67caacad,
+    - target: {fileID: 224912770777038712, guid: 55c2bda33254a03429f5725b67caacad,
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -1499,12 +1489,12 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224609082432319744, guid: 55c2bda33254a03429f5725b67caacad,
+    - target: {fileID: 224950621992266228, guid: 55c2bda33254a03429f5725b67caacad,
         type: 2}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224609082432319744, guid: 55c2bda33254a03429f5725b67caacad,
+    - target: {fileID: 224950621992266228, guid: 55c2bda33254a03429f5725b67caacad,
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -1517,6 +1507,20 @@ Prefab:
     - target: {fileID: 224713903634137238, guid: 55c2bda33254a03429f5725b67caacad,
         type: 2}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224609082432319744, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224609082432319744, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438706109138360, guid: 55c2bda33254a03429f5725b67caacad, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
