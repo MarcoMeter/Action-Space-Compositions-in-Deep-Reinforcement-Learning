@@ -8,7 +8,7 @@ public class ShootingBirdsAgent : Agent
 {
     #region Member Fields
     private ShootingBirdsEnvironment _environment;
-    private const string _BIRD_TAG = "Bird";
+    protected const string _BIRD_TAG = "Bird";
     private const string _ENV_TAG = "Environment";
     [SerializeField]
     private GameObject[] _obstacleSzenarios;
@@ -49,7 +49,7 @@ public class ShootingBirdsAgent : Agent
     [SerializeField]
     private LayerMask _layerMaskEnv;
     [SerializeField]
-    private LayerMask _layerMaskBirdEnv;
+    protected LayerMask _layerMaskBirdEnv;
     #endregion
 
     #region Unity ML-Agents
