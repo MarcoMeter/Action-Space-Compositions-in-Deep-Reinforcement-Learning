@@ -17,6 +17,6 @@ MonoBehaviour:
     vectorActionSize: 03000000
     cameraResolutions: []
     vectorActionDescriptions:
-    - Shoot, Reload, Nothing
+    - Nothing, Shoot, Reload
     vectorActionSpaceType: 0
   model: {fileID: 0}
