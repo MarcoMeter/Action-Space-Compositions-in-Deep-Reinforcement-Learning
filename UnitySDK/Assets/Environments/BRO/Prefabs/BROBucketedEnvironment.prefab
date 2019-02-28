@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 4446819097891502}
   m_Layer: 0
   m_Name: BROBucketedEnvironment
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -434,7 +434,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1708559727458838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -103.6}
+  m_LocalPosition: {x: 0, y: 0, z: 9.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4964850507573374}
@@ -984,9 +984,7 @@ MonoBehaviour:
     onDemandDecision: 0
     numberOfActionsBetweenDecisions: 6
   _academy: {fileID: 0}
-  _movementSpeed: 10
   _walkFeedback: {fileID: 100000, guid: 66a536858892ab147a0a0d1363ca72f5, type: 2}
-  _maxBlinkCooldown: 200
   _rigidbody: {fileID: 54177978400950156}
   _pitchTransform: {fileID: 4964850507573374}
   _beast: {fileID: 114777832012571512}
@@ -994,8 +992,6 @@ MonoBehaviour:
   _pitchBoundaryCollider: {fileID: 135416586299964884}
   _characterTransform: {fileID: 4377086406405304}
   _characterRigidbody: {fileID: 54726971628979440}
-  _characterMovementSpeed: 2
-  _characterRotationSpeed: 10
   _defaultMaterial: {fileID: 2100000, guid: be3f2e60f795f424e809ec00fb22c89b, type: 2}
   _blinkReadyMaterial: {fileID: 2100000, guid: 9c15675ba1391cc449c31e3c57850f70, type: 2}
   _renderer: {fileID: 23944467151684984}
@@ -1423,7 +1419,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 285.3, y: 272.2001}
-  m_SizeDelta: {x: 1181, y: 168}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224243313404509924
 RectTransform:
@@ -1441,7 +1437,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 283.28, y: 5.32}
-  m_SizeDelta: {x: 583, y: 168}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224272329228864778
 RectTransform:
@@ -1459,7 +1455,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -111.4, y: 272.2}
-  m_SizeDelta: {x: 1151, y: 168}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224393770405908000
 RectTransform:
@@ -1477,7 +1473,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -114.9, y: 239}
-  m_SizeDelta: {x: 871, y: 168}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224460070136832622
 RectTransform:
@@ -1495,7 +1491,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -89, y: 255.6}
-  m_SizeDelta: {x: 75, y: 168}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224688888327560252
 RectTransform:
@@ -1513,7 +1509,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 285.3, y: 250.8}
-  m_SizeDelta: {x: 332, y: 168}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224725548714305706
 RectTransform:
@@ -1531,7 +1527,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -138, y: 255.6}
-  m_SizeDelta: {x: 75, y: 168}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224934435490326012
 RectTransform:

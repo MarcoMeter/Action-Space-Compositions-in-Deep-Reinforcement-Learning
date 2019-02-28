@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: SBThresholdBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 32
-    numStackedVectorObservations: 1
+    vectorObservationSize: 44
+    numStackedVectorObservations: 3
     vectorActionSize: 04000000
     cameraResolutions: []
     vectorActionDescriptions:
@@ -22,4 +22,4 @@ MonoBehaviour:
     - Shoot
     - Reload
     vectorActionSpaceType: 1
-  model: {fileID: 4900000, guid: 6b88cad763e53574c8f976d4ee8df8e3, type: 3}
+  model: {fileID: 4900000, guid: 3e78bb92fa3aeb24c9ba1ac1be01ca8e, type: 3}

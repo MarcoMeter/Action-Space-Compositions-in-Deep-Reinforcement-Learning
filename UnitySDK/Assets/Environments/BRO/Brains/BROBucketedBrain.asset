@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Name: BROBucketedBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 21
+    vectorObservationSize: 22
     numStackedVectorObservations: 3
-    vectorActionSize: 070000000700000003000000
+    vectorActionSize: 0b0000000b00000003000000
     cameraResolutions: []
     vectorActionDescriptions:
     - Horizontal Movement
     - Vertical Movement
     - Move, Blink, Nothing
     vectorActionSpaceType: 0
-  model: {fileID: 0}
+  model: {fileID: 4900000, guid: cafee841039725448ade861f1a645157, type: 3}

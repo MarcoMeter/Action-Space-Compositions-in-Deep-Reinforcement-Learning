@@ -3,8 +3,6 @@
 public class ShootingBirdsThresholdAgent : ShootingBirdsAgent
 {
     #region Member Fields
-    [Header("Action Space")]
-    [SerializeField]
     private float _discreteActionThreshold = 0.1f;
     #endregion
 

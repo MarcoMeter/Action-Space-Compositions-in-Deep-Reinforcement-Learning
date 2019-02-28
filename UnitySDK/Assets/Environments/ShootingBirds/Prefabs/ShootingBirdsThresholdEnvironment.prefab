@@ -4730,7 +4730,7 @@ MonoBehaviour:
   _movementSpeed: 50
   _maxAmmo: 8
   _infinteAmmo: 0
-  _numVisionRays: 24
+  _numVisionRays: 12
   _visionRayLength: 14
   _layerMaskBird:
     serializedVersion: 2

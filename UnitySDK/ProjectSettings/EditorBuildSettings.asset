@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Environments/ShootingBirds/Scenes/BucketedSB.unity
-    guid: e528e206d4d2a474b96421273ca31de5
+    path: Assets/Environments/BRO/Scenes/BucketedBRO.unity
+    guid: fa6b3820fdd0cd54ba85dba5b933ade6
   m_configObjects: {}
