@@ -20,7 +20,7 @@ public class ShootingBirdsMovementAgent : ShootingBirdsAgent
     }
 
     /// <summary>
-    /// Observes the complete state space, excluding the ammunition's state.
+    /// Observes the complete state space, excluding the ammunition's state. Total: 42
     /// </summary>
     public override void CollectObservations()
     {
@@ -32,7 +32,7 @@ public class ShootingBirdsMovementAgent : ShootingBirdsAgent
         // Speed of the agent
         AddVectorObs(_rigidbody.velocity.magnitude / _movementSpeed);   // 1
         // Distances to spotted birds (-1.0 if nothing is spotted)
-        AddVectorObs(SenseSurroundings());                              // 5 * 24 (numVisionRays)
+        AddVectorObs(SenseSurroundings());                              // 3 * 12 (numVisionRays)
         // Check what's being hovered
         AddVectorObs(SenseHoveredEntity());                             // 1
     }

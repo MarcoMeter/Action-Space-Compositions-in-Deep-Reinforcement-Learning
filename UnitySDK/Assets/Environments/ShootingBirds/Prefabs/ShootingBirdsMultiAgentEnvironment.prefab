@@ -4775,7 +4775,7 @@ MonoBehaviour:
   _movementSpeed: 50
   _maxAmmo: 8
   _infinteAmmo: 0
-  _numVisionRays: 24
+  _numVisionRays: 12
   _visionRayLength: 14
   _layerMaskBird:
     serializedVersion: 2
@@ -4855,6 +4855,9 @@ MonoBehaviour:
   - {fileID: 1427952681305452}
   - {fileID: 1508163085978774}
   - {fileID: 1674312302206374}
+  - {fileID: 1813534800306398}
+  - {fileID: 1854865549735510}
+  - {fileID: 1681872949814944}
   _accuracyText: {fileID: 114900317744369476}
   _ammoText: {fileID: 114298657680996420}
   _averageVelocityText: {fileID: 114900140704305904}
@@ -4862,7 +4865,7 @@ MonoBehaviour:
   _movementSpeed: 50
   _maxAmmo: 8
   _infinteAmmo: 0
-  _numVisionRays: 24
+  _numVisionRays: 12
   _visionRayLength: 14
   _layerMaskBird:
     serializedVersion: 2

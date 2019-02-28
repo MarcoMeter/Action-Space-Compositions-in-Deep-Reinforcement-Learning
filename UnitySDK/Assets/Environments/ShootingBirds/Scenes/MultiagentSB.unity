@@ -164,7 +164,7 @@ MonoBehaviour:
     targetFrameRate: 60
   resetParameters:
     resetParameters: []
-  _log: 0
+  _log: 1
 --- !u!4 &80138113
 Transform:
   m_ObjectHideFlags: 0
@@ -1249,22 +1249,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 224818078389920864, guid: 5ebddf601f853374fb85a297f89e8e3b,
+    - target: {fileID: 224665829411131914, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224818078389920864, guid: 5ebddf601f853374fb85a297f89e8e3b,
+    - target: {fileID: 224665829411131914, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224665829411131914, guid: 5ebddf601f853374fb85a297f89e8e3b,
+    - target: {fileID: 224818078389920864, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224665829411131914, guid: 5ebddf601f853374fb85a297f89e8e3b,
+    - target: {fileID: 224818078389920864, guid: 5ebddf601f853374fb85a297f89e8e3b,
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0

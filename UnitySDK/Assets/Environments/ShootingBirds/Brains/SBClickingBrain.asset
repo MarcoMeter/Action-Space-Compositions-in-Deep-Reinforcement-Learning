@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: SBClickingBrain
   m_EditorClassIdentifier: 
   brainParameters:
-    vectorObservationSize: 32
-    numStackedVectorObservations: 1
+    vectorObservationSize: 44
+    numStackedVectorObservations: 3
     vectorActionSize: 03000000
     cameraResolutions: []
     vectorActionDescriptions:
