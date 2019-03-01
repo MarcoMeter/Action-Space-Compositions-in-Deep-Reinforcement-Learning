@@ -24,9 +24,9 @@ public class ShootingBirdsAgent : Agent
     private int _reloadsOnEmpty = 0;
     [SerializeField]
     private Text _averageVelocityText;
-    private float _sumVelocityX = 0.0f;
-    private float _sumVelocityY = 0.0f;
-    private int _stepDevisor = 0;
+    protected float _sumVelocityX = 0.0f;
+    protected float _sumVelocityY = 0.0f;
+    protected int _stepDevisor = 0;
     [Header("Action Space")]
     [SerializeField]
     protected Rigidbody2D _rigidbody;

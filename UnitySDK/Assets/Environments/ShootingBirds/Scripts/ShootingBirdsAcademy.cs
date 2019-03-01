@@ -12,7 +12,7 @@ public class ShootingBirdsAcademy : Academy
     #region Member Fields
     [SerializeField]
     private bool _log = true;
-    private List<ShootingBirdsBucketedAgent> _agents = new List<ShootingBirdsBucketedAgent>();
+    private List<ShootingBirdsShootingAgent> _agents = new List<ShootingBirdsShootingAgent>();
     private string _fileName;
     private int _eps = 1;
     #endregion
@@ -29,8 +29,8 @@ public class ShootingBirdsAcademy : Academy
         var agentGos = GameObject.FindGameObjectsWithTag("Agent");
         foreach(var go in agentGos)
         {
-            if(go.GetComponent<ShootingBirdsBucketedAgent>())
-                _agents.Add(go.GetComponent<ShootingBirdsBucketedAgent>());
+            if(go.GetComponent<ShootingBirdsShootingAgent>())
+                _agents.Add(go.GetComponent<ShootingBirdsShootingAgent>());
         }
     }
 

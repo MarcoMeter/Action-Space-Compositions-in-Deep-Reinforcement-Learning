@@ -16,7 +16,10 @@ public class ShootingBirdsMovementAgent : ShootingBirdsAgent
     /// </summary>
     public override void AgentReset()
     {
-        base.AgentReset();
+        // Reset data holders for the speed UI
+        _sumVelocityX = 0.0f;
+        _sumVelocityY = 0.0f;
+        _stepDevisor = 0;
     }
 
     /// <summary>

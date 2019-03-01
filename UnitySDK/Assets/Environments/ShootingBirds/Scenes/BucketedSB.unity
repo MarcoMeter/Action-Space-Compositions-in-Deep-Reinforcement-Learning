@@ -729,7 +729,7 @@ MonoBehaviour:
     targetFrameRate: 1
   resetParameters:
     resetParameters: []
-  _log: 0
+  _log: 1
 --- !u!4 &849399449
 Transform:
   m_ObjectHideFlags: 0

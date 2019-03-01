@@ -10,6 +10,7 @@ public class ShootingBirdsShootingAgent : ShootingBirdsAgent
     public override void InitializeAgent()
     {
         _movementAgent = GetComponent<ShootingBirdsMovementAgent>();
+        base.InitializeAgent();
     }
 
     /// <summary>

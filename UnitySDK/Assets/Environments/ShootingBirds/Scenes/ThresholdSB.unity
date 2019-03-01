@@ -1087,7 +1087,7 @@ MonoBehaviour:
     targetFrameRate: 50
   resetParameters:
     resetParameters: []
-  _log: 0
+  _log: 1
 --- !u!4 &785263446
 Transform:
   m_ObjectHideFlags: 0
@@ -1475,6 +1475,46 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224777045795672564, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224609082432319744, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224609082432319744, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224713903634137238, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224713903634137238, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224950621992266228, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224950621992266228, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224135713936889724, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224135713936889724, guid: 55c2bda33254a03429f5725b67caacad,
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0

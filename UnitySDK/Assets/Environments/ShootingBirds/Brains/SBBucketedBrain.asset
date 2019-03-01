@@ -14,7 +14,7 @@ MonoBehaviour:
   brainParameters:
     vectorObservationSize: 44
     numStackedVectorObservations: 3
-    vectorActionSize: 0b0000000b00000003000000
+    vectorActionSize: 290000002900000003000000
     cameraResolutions: []
     vectorActionDescriptions:
     - Horizontal movement
