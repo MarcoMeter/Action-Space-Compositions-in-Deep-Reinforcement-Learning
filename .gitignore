@@ -95,3 +95,4 @@ ml-agents-protobuf/Grpc*
 dist/
 build/
 
+*.csv
