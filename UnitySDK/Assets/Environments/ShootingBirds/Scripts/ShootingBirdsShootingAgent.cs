@@ -59,7 +59,6 @@ public class ShootingBirdsShootingAgent : ShootingBirdsAgent
         if (coll && coll.tag.Equals(_BIRD_TAG))
         {
             BirdBehavior bird = coll.GetComponent<BirdBehavior>();
-            bird.Hit();
             // Reward the agent for hitting a bird based on the bird's size
             switch (bird.BirdSize)
             {
