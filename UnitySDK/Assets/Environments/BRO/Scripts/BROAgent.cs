@@ -77,7 +77,6 @@ public abstract class BROAgent : Agent
         _slowSphere.Reset(SamplePitchLocation());
         _destinationSet = false;
         _renderer.material = _blinkReadyMaterial;
-        Vector3 _boostPos = SamplePitchLocation();
         
         // UI
         _stepDevisor = 0;
