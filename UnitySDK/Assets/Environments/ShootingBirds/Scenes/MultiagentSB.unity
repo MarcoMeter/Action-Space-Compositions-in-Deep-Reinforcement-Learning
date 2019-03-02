@@ -165,6 +165,7 @@ MonoBehaviour:
   resetParameters:
     resetParameters: []
   _log: 1
+  _agentType: 2
 --- !u!4 &80138113
 Transform:
   m_ObjectHideFlags: 0

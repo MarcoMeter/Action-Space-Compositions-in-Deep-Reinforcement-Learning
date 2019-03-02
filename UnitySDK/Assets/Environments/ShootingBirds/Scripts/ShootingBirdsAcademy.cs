@@ -12,25 +12,42 @@ public class ShootingBirdsAcademy : Academy
     #region Member Fields
     [SerializeField]
     private bool _log = true;
-    private List<ShootingBirdsShootingAgent> _agents = new List<ShootingBirdsShootingAgent>();
+    [SerializeField]
+    private ShootingBirdsAgentType _agentType = ShootingBirdsAgentType.Bucketed;
+    protected List<ShootingBirdsAgent> _agents = new List<ShootingBirdsAgent>();
     private string _fileName;
     private int _eps = 1;
     #endregion
 
+    #region Unity Lifecycle
     private void Start()
     {
-        _fileName = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + UnityEngine.Random.Range(0, 10000) + ".csv";
+        _fileName = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + UnityEngine.Random.Range(0, 10000) + _agentType.ToString() + ".csv";
     }
+    #endregion
 
     #region Academy Overrides
     public override void InitializeAcademy()
     {
         // Get agent references
         var agentGos = GameObject.FindGameObjectsWithTag("Agent");
-        foreach(var go in agentGos)
+        foreach (var go in agentGos)
         {
-            if(go.GetComponent<ShootingBirdsShootingAgent>())
-                _agents.Add(go.GetComponent<ShootingBirdsShootingAgent>());
+            switch (_agentType)
+            {
+                case ShootingBirdsAgentType.Bucketed:
+                    if (go.GetComponent<ShootingBirdsBucketedAgent>())
+                        _agents.Add(go.GetComponent<ShootingBirdsBucketedAgent>());
+                    break;
+                case ShootingBirdsAgentType.Threshold:
+                    if (go.GetComponent<ShootingBirdsThresholdAgent>())
+                        _agents.Add(go.GetComponent<ShootingBirdsThresholdAgent>());
+                    break;
+                case ShootingBirdsAgentType.Multiagent:
+                    if (go.GetComponent<ShootingBirdsShootingAgent>())
+                        _agents.Add(go.GetComponent<ShootingBirdsShootingAgent>());
+                    break;
+            }
         }
     }
 
@@ -110,4 +127,11 @@ public class ShootingBirdsAcademy : Academy
         }
     }
     #endregion
+}
+
+public enum ShootingBirdsAgentType
+{
+    Bucketed = 0,
+    Threshold = 1,
+    Multiagent = 2
 }
