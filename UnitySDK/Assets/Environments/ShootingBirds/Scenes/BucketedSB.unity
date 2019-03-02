@@ -155,66 +155,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -261,66 +265,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -367,66 +375,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -473,66 +485,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -730,6 +746,7 @@ MonoBehaviour:
   resetParameters:
     resetParameters: []
   _log: 1
+  _agentType: 0
 --- !u!4 &849399449
 Transform:
   m_ObjectHideFlags: 0
@@ -786,66 +803,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -892,66 +913,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -998,66 +1023,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -1104,66 +1133,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -1210,66 +1243,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -1316,66 +1353,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -1422,66 +1463,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -1528,66 +1573,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -1634,66 +1683,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
@@ -1740,66 +1793,70 @@ Prefab:
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224728476495378910, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224459419160424802, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 225
       objectReference: {fileID: 0}
     - target: {fileID: 224644592702186594, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 76
       objectReference: {fileID: 0}
     - target: {fileID: 224406539347702522, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 142
       objectReference: {fileID: 0}
     - target: {fileID: 224170789203722298, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 224420268314985448, guid: 34e5f343611f38f47bf36c23257c8adb,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1126819400535462, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
       propertyPath: m_Name
       value: ShootingBirdsBucketedEnvironment (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578635142141378, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34e5f343611f38f47bf36c23257c8adb, type: 2}
