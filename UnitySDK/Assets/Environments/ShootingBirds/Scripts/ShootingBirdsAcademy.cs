@@ -22,7 +22,7 @@ public class ShootingBirdsAcademy : Academy
     #region Unity Lifecycle
     private void Start()
     {
-        _fileName = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + UnityEngine.Random.Range(0, 10000) + _agentType.ToString() + ".csv";
+        _fileName = _agentType.ToString() + "-" + DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + UnityEngine.Random.Range(0, 10000) + ".csv";
     }
     #endregion
 
