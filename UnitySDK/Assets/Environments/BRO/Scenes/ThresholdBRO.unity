@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1235,6 +1235,10 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 4fba0b6c5253f9f4492fe312b5dd28e7,
         type: 2}
+    - target: {fileID: 1908861431207988, guid: b62444e2d66054a4692a640f9df1e7af, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b62444e2d66054a4692a640f9df1e7af, type: 2}
   m_IsPrefabAsset: 0
@@ -1583,7 +1587,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4fba0b6c5253f9f4492fe312b5dd28e7, type: 2}
     _brainsToControl:
     - {fileID: 11400000, guid: 4fba0b6c5253f9f4492fe312b5dd28e7, type: 2}
-  maxSteps: 10000
+  maxSteps: 15000
   trainingConfiguration:
     width: 320
     height: 180
