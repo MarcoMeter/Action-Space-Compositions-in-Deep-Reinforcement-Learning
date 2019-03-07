@@ -269,7 +269,7 @@ public abstract class BROAgent : Agent
     /// Samples a random position which is on the pitch.
     /// </summary>
     /// <returns>Random position on the pitch.</returns>
-    protected Vector3 SamplePitchLocation()
+    public Vector3 SamplePitchLocation()
     {
         float a = UnityEngine.Random.Range(0.0f, 1.0f) * 2 * Mathf.PI;
         float r = (_pitchTransform.localScale.x / 2) * Mathf.Sqrt(UnityEngine.Random.Range(0.0f, 1.0f)); // Radius is assumed to be the scale
