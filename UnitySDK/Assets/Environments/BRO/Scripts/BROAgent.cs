@@ -51,12 +51,12 @@ public abstract class BROAgent : Agent
     [Header("UI")]
     [SerializeField]
     private Text _averageSpeedText;
-    private float _sumVelocityX = 0.0f;
-    private float _sumVelocityZ = 0.0f;
-    private int _stepDevisor = 0;
+    protected float _sumVelocityX = 0.0f;
+    protected float _sumVelocityZ = 0.0f;
+    protected int _stepDevisor = 0;
     [SerializeField]
     private Text _survivalDurationText;
-    private int _survivalDuration = 0;
+    protected int _survivalDuration = 0;
     #endregion
 
     #region ML-Agents
@@ -222,8 +222,11 @@ public abstract class BROAgent : Agent
             {
                 _characterRigidbody.velocity = Vector3.zero;
             }
+        }
 
-            // Rotate towards movement direction
+        // Rotate towards movement direction
+        if (_lookDirection != Vector3.zero)
+        {
             _characterTransform.rotation = Quaternion.RotateTowards(_characterTransform.rotation, Quaternion.LookRotation(_lookDirection), _characterRotationSpeed);
         }
     }
@@ -241,7 +244,6 @@ public abstract class BROAgent : Agent
         _lookDirection = (_destination - _characterTransform.position).normalized;
         if (_academy.GetIsInference())
             Instantiate(_walkFeedback, new Vector3(transform.position.x, 0.1f, transform.position.z), Quaternion.Euler(new Vector3(90, 0, 0)));
-
     }
 
     /// <summary>
