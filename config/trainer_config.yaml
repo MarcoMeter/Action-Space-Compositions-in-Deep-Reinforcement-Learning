@@ -8,7 +8,7 @@ default:
     hidden_units: 128
     lambd: 0.95
     learning_rate: 3.0e-4
-    max_steps: 5.0e4
+    max_steps: 2.0e6
     memory_size: 256
     normalize: false
     num_epoch: 3
@@ -22,47 +22,43 @@ default:
     curiosity_enc_size: 128
 
 BROThresholdBrain:
-    batch_size: 2500
+    batch_size: 512
     beta: 3.5e-3
-    buffer_size: 20000
-    hidden_units: 30
-    learning_rate: 4.0e-4
-    max_steps: 5.0e5
-    num_epoch: 10
-    num_layers: 1
+    buffer_size: 8192
+    hidden_units: 120
+    learning_rate: 3.0e-4
+    num_epoch: 3
+    num_layers: 2
     time_horizon: 64
 
 BROBucketedBrain:
-    batch_size: 96
+    batch_size: 256
     beta: 3.0e-3
-    buffer_size: 10240
-    hidden_units: 20
+    buffer_size: 8096
+    hidden_units: 80
     learning_rate: 3.0e-4
-    max_steps: 5.0e5
-    num_epoch: 5
-    num_layers: 1
+    num_epoch: 4
+    num_layers: 2
     time_horizon: 64
 
 BROMovementBrain:
-    batch_size: 2000
+    batch_size: 512
     beta: 3.0e-3
-    buffer_size: 20000
-    hidden_units: 20
-    learning_rate: 3.75e-4
-    max_steps: 1.0e6
-    num_epoch: 5
-    num_layers: 1
+    buffer_size: 8096
+    hidden_units: 120
+    learning_rate: 3.00e-4
+    num_epoch: 3
+    num_layers: 2
     time_horizon: 64
 
 BROClickBrain:
-    batch_size: 64
+    batch_size: 256
     beta: 3.0e-3
-    buffer_size: 8192
-    hidden_units: 20
+    buffer_size: 8096
+    hidden_units: 80
     learning_rate: 3.0e-4
-    max_steps: 1.0e6
-    num_epoch: 3
-    num_layers: 1
+    num_epoch: 4
+    num_layers: 2
     time_horizon: 64
     
 SBThresholdBrain:
@@ -71,7 +67,6 @@ SBThresholdBrain:
     buffer_size: 8192
     hidden_units: 180
     learning_rate: 3.5e-4
-    max_steps: 2.0e6
     num_epoch: 3
     num_layers: 2
     time_horizon: 48
@@ -82,7 +77,6 @@ SBBucketedBrain:
     buffer_size: 4096
     hidden_units: 100
     learning_rate: 3.25e-4
-    max_steps: 2.0e6
     num_epoch: 4
     num_layers: 2
     time_horizon: 48
@@ -93,7 +87,6 @@ SBMovementBrain:
     buffer_size: 8192
     hidden_units: 180
     learning_rate: 3.5e-4
-    max_steps: 2.0e6
     num_epoch: 3
     num_layers: 2
     time_horizon: 48
@@ -104,7 +97,6 @@ SBClickingBrain:
     buffer_size: 4096
     hidden_units: 100
     learning_rate: 3.25e-4
-    max_steps: 2.0e6
     num_epoch: 4
     num_layers: 2
     time_horizon: 48
