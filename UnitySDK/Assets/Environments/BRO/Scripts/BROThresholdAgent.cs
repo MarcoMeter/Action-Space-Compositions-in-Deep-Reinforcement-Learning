@@ -2,7 +2,7 @@
 public class BROThresholdAgent : BROAgent
 {
     #region Member Fields
-    private float _discreteActionThreshold = 0.33f;
+    private float _discreteActionThreshold = 0.1f;
     #endregion
 
     #region Unity ML-Agents

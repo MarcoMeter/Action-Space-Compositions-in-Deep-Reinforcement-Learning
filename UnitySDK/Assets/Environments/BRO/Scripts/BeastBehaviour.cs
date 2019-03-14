@@ -10,6 +10,7 @@ public class BeastBehaviour : MonoBehaviour
     private float _maxSpeed = 75.0f;
     [SerializeField]
     private float _speedMultiplier = 0.6f;
+    [SerializeField]
     private float _speed;
     [SerializeField]
     float _minAccuracyMagnitude = 0.01f;

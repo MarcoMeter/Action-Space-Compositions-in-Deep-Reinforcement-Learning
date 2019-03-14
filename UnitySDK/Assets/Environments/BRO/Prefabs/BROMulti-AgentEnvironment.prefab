@@ -1072,8 +1072,9 @@ MonoBehaviour:
   _minSpeed: 0.8
   _maxSpeed: 8.5
   _speedMultiplier: 0.05
+  _speed: 0
   _minAccuracyMagnitude: 0.01
-  _maxAccuracyMagnitude: 0.5
+  _maxAccuracyMagnitude: 0.75
   _accuracyMagnitude: 0.005
   _accuracyMagnitudeMultiplier: 0.00275
   _rigidbody: {fileID: 54844871025033680}

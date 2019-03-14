@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1159,86 +1159,6 @@ Prefab:
       propertyPath: _academy
       value: 
       objectReference: {fileID: 1179579695}
-    - target: {fileID: 224439126398813648, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224439126398813648, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224997910870609560, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224997910870609560, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224590629996550836, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224590629996550836, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224555366335989022, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224555366335989022, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224304965504042898, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224304965504042898, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224794132483942008, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224794132483942008, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224162162658478336, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224162162658478336, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114339816503360312, guid: b62444e2d66054a4692a640f9df1e7af,
-        type: 2}
-      propertyPath: brain
-      value: 
-      objectReference: {fileID: 11400000, guid: 4fba0b6c5253f9f4492fe312b5dd28e7,
-        type: 2}
-    - target: {fileID: 1908861431207988, guid: b62444e2d66054a4692a640f9df1e7af, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b62444e2d66054a4692a640f9df1e7af, type: 2}
   m_IsPrefabAsset: 0
@@ -1587,7 +1507,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4fba0b6c5253f9f4492fe312b5dd28e7, type: 2}
     _brainsToControl:
     - {fileID: 11400000, guid: 4fba0b6c5253f9f4492fe312b5dd28e7, type: 2}
-  maxSteps: 15000
+  maxSteps: 12000
   trainingConfiguration:
     width: 320
     height: 180
