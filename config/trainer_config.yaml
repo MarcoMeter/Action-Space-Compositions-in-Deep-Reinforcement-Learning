@@ -15,7 +15,7 @@ default:
     num_layers: 2
     time_horizon: 64
     sequence_length: 64
-    summary_freq: 1000
+    summary_freq: 20000
     use_recurrent: false
     use_curiosity: false
     curiosity_strength: 0.01
@@ -31,7 +31,6 @@ BROThresholdBrain:
     num_epoch: 10
     num_layers: 1
     time_horizon: 64
-    summary_freq: 5000
 
 BROBucketedBrain:
     batch_size: 96
@@ -43,7 +42,6 @@ BROBucketedBrain:
     num_epoch: 5
     num_layers: 1
     time_horizon: 64
-    summary_freq: 5000
 
 BROMovementBrain:
     batch_size: 2000
@@ -55,7 +53,6 @@ BROMovementBrain:
     num_epoch: 5
     num_layers: 1
     time_horizon: 64
-    summary_freq: 5000
 
 BROClickBrain:
     batch_size: 64
@@ -67,7 +64,6 @@ BROClickBrain:
     num_epoch: 3
     num_layers: 1
     time_horizon: 64
-    summary_freq: 5000
     
 SBThresholdBrain:
     batch_size: 512
@@ -79,7 +75,6 @@ SBThresholdBrain:
     num_epoch: 3
     num_layers: 2
     time_horizon: 48
-    summary_freq: 5000
 
 SBBucketedBrain:
     batch_size: 256
@@ -91,7 +86,6 @@ SBBucketedBrain:
     num_epoch: 4
     num_layers: 2
     time_horizon: 48
-    summary_freq: 5000
     
 SBMovementBrain:
     batch_size: 512
@@ -103,7 +97,6 @@ SBMovementBrain:
     num_epoch: 3
     num_layers: 2
     time_horizon: 48
-    summary_freq: 5000
 
 SBClickingBrain:
     batch_size: 256
@@ -115,4 +108,3 @@ SBClickingBrain:
     num_epoch: 4
     num_layers: 2
     time_horizon: 48
-    summary_freq: 5000
