@@ -19,4 +19,5 @@ MonoBehaviour:
     vectorActionDescriptions:
     - Move, Blink, Nothing
     vectorActionSpaceType: 0
-  model: {fileID: 0}
+  model: {fileID: 11400000, guid: 334da2589205f5c4a9f4cbe688dd1e0e, type: 3}
+  inferenceDevice: 0

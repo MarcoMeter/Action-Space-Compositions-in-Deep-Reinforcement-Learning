@@ -20,7 +20,7 @@ public class BROBucketedAgent : BROAgent
     private float[] _movementBuckets11 = new float[] { -1.0f, -0.8f, -0.6f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 0.6f, 0.8f, 1.0f };
 
     // 7 Actions
-    private float[] _movementBuckets7 = new float[] { -1.0f, -0.5f, -0.1f, 0.0f, 0.1f, 0.5f, 1.0f };
+    private float[] _movementBuckets3 = new float[] { -1.0f, 0.0f, 1.0f };
     #endregion
 
     #region Unity ML-Agents
@@ -53,14 +53,14 @@ public class BROBucketedAgent : BROAgent
     {
         // Unit circle locomotion: first action determines the angle(direction), the second one the speed
         // Process the action
-        float angle = _movementBuckets11[(int)vectorAction[0]] * 90;
+        float angle = _movementBuckets3[(int)vectorAction[0]] * 90;
         // Retrieve position form unit circle
         Vector3 circumferencePoint = new Vector3((Mathf.Cos(angle * Mathf.Deg2Rad)),
                                                 0,
                                                 (Mathf.Sin(angle * Mathf.Deg2Rad)));
 
         // Apply velocity based on direction (coming from the unit circle)
-        _rigidbody.velocity = circumferencePoint.normalized * _movementBuckets11[(int)vectorAction[1]] * _movementSpeed;
+        _rigidbody.velocity = circumferencePoint.normalized * _movementBuckets3[(int)vectorAction[1]] * _movementSpeed;
 
         // Move to mouse position
         if ((int)vectorAction[2] == 0)

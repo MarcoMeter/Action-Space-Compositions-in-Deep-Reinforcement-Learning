@@ -19,4 +19,5 @@ MonoBehaviour:
     vectorActionDescriptions:
     - Nothing, Shoot, Reload
     vectorActionSpaceType: 0
-  model: {fileID: 0}
+  model: {fileID: 11400000, guid: 53673fce257866c48b1e9be2042026c3, type: 3}
+  inferenceDevice: 0

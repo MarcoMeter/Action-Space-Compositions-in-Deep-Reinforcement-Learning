@@ -3,7 +3,7 @@
 public class ShootingBirdsThresholdAgent : ShootingBirdsAgent
 {
     #region Member Fields
-    private float _discreteActionThreshold = 0.1f;
+    private float _discreteActionThreshold = 0.5f;
     #endregion
 
     #region Unity ML-Agents
@@ -47,12 +47,12 @@ public class ShootingBirdsThresholdAgent : ShootingBirdsAgent
         _rigidbody.velocity = circumferencePoint.normalized * vectorAction[1] * _movementSpeed;
 
         // Shoot
-        if (Mathf.Abs(vectorAction[2]) < _discreteActionThreshold)
+        if (vectorAction[2] > 0)
         {
             Shoot();
         }
         // Reload
-        if (Mathf.Abs(vectorAction[3]) < _discreteActionThreshold)
+        if (vectorAction[3] > 0)
         {
             Reload();
         }

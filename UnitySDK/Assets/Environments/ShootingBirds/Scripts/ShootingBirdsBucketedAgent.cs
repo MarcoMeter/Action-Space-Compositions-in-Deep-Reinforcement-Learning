@@ -20,7 +20,7 @@ public class ShootingBirdsBucketedAgent : ShootingBirdsAgent
     private float[] _movementBuckets11 = new float[] {-1.0f, -0.8f, -0.6f, -0.4f, -0.2f, 0.0f, 0.2f, 0.4f, 0.6f, 0.8f, 1.0f};
 
     // 7 Actions
-    private float[] _movementBuckets7 = new float[] { -1.0f, -0.5f, -0.1f, 0.0f, 0.1f, 0.5f, 1.0f };
+    private float[] _movementBuckets3 = new float[] { -1.0f, 0.0f, 1.0f };
     #endregion
 
     #region Unity ML-Agents

@@ -14,12 +14,12 @@ MonoBehaviour:
   brainParameters:
     vectorObservationSize: 22
     numStackedVectorObservations: 3
-    vectorActionSize: 0b0000000b00000003000000
+    vectorActionSize: 030000000300000003000000
     cameraResolutions: []
     vectorActionDescriptions:
     - Horizontal Movement
     - Vertical Movement
     - Move, Blink, Nothing
     vectorActionSpaceType: 0
-  model: {fileID: 11400000, guid: c96c80ccf2c3de244a33fe52df2a8df5, type: 3}
+  model: {fileID: 11400000, guid: 1e41d20872bde64419d40b625d9728c5, type: 3}
   inferenceDevice: 0

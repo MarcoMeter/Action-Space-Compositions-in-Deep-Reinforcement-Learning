@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 1eca7edd938d88d458db756e999ece10
+ScriptedImporter:
+  fileIDToRecycleName:
+    11400000: Assets/Environments/BRO/Brains/BROThresholdBrain.nn
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 83221ad3db87f4b3b91b041047cb2bc5, type: 3}

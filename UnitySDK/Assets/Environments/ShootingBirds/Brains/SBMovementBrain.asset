@@ -20,4 +20,5 @@ MonoBehaviour:
     - Horizontal Movement
     - Vertical Movement
     vectorActionSpaceType: 1
-  model: {fileID: 0}
+  model: {fileID: 11400000, guid: 0f7b3ef41ef7df040abd63f70cbdff2f, type: 3}
+  inferenceDevice: 0

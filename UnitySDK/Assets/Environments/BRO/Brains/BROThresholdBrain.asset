@@ -22,5 +22,5 @@ MonoBehaviour:
     - Click move
     - Click blink
     vectorActionSpaceType: 1
-  model: {fileID: 11400000, guid: e0d365f4f82c5b54d92a08d8fb6abb59, type: 3}
+  model: {fileID: 11400000, guid: 1eca7edd938d88d458db756e999ece10, type: 3}
   inferenceDevice: 0

@@ -2,7 +2,7 @@
 public class BROThresholdAgent : BROAgent
 {
     #region Member Fields
-    private float _discreteActionThreshold = 0.1f;
+    private float _discreteActionThreshold = 0.5f;
     #endregion
 
     #region Unity ML-Agents
@@ -44,12 +44,12 @@ public class BROThresholdAgent : BROAgent
 
 
         // Move to mouse position or collect power up by clicking
-        if (Mathf.Abs(vectorAction[2]) < _discreteActionThreshold)
+        if (vectorAction[2] > 0)
         {
             Move();
         }
         // Blink to mouse position
-        if (Mathf.Abs(vectorAction[3]) < _discreteActionThreshold)
+        if (vectorAction[3] > 0)
         {
             Blink();
         }
