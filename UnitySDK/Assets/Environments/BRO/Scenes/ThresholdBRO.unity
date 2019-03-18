@@ -1162,7 +1162,7 @@ Prefab:
     - target: {fileID: 114439646625015554, guid: b62444e2d66054a4692a640f9df1e7af,
         type: 2}
       propertyPath: m_Text
-      value: Inner Threshold 0.0
+      value: Threshold 0.0
       objectReference: {fileID: 0}
     - target: {fileID: 224304965504042898, guid: b62444e2d66054a4692a640f9df1e7af,
         type: 2}
