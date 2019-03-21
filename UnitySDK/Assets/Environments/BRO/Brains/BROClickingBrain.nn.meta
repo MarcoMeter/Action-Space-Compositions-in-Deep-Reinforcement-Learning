@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 334da2589205f5c4a9f4cbe688dd1e0e
+ScriptedImporter:
+  fileIDToRecycleName:
+    11400000: Assets/Environments/BRO/Brains/BROClickingBrain.nn
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 83221ad3db87f4b3b91b041047cb2bc5, type: 3}

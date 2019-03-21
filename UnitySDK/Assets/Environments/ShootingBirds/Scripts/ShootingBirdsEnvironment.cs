@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 /// <summary>
 /// This class controls the environment, which is basically the spawn behavior of the birds.
@@ -14,32 +15,36 @@ public class ShootingBirdsEnvironment : MonoBehaviour
     [SerializeField]
     private Transform _rightBottomIndicator;
     private int _initialSpawnCount = 10;
-    private int _spawnRate = 1;
-    private float _spawnInterval = 0.5f;
+    // Bird pool
+    private List<GameObject> _birdPool = new List<GameObject>();
+    private int _birdPoolSize = 20;
+    [SerializeField]
+    private GameObject _birdPoolParent;
+    [SerializeField]
+    private bool _allowPoolGrowth = true;
     #endregion
 
     #region Unity Lifecycle
     /// <summary>
-    /// Initially spawns a certain number of birds to begin with. Triggers the invocation of further spawns.
+    /// Initially spawns a certain number of birds to begin with.
     /// </summary>
     private void Start()
     {
-        // Initial spawn
+        InitBirdPool();
+
+        // Spawn initial birds
         for (int i = 0; i < _initialSpawnCount; i++)
         {
             Spawn();
         }
-
-        // Continues spawns
-        InvokeRepeating("SpawnWave", _spawnInterval, _spawnInterval);
     }
     #endregion
 
-    #region Private Functions
+    #region Public Functions
     /// <summary>
     /// Spawns a single bird.
     /// </summary>
-    private void Spawn()
+    public void Spawn()
     {
         // Spawn position (x,y)
         // Decide on spawn site
@@ -58,22 +63,64 @@ public class ShootingBirdsEnvironment : MonoBehaviour
             spawnPos = new Vector3(_rightBottomIndicator.position.x,
                             Random.Range(_rightBottomIndicator.position.y, _leftTopSpawnIndicatior.position.y), size - spawnZAdjustment);
         }
-        // Instantiate bird
-        var birdBehavior = Instantiate(_birdPrefab, spawnPos, Quaternion.identity).GetComponent<BirdBehavior>();
 
-        // Initialize bird behavior
-        var speed = Random.Range(1.5f, 6f);
-        birdBehavior.Init((BirdSize)size, speed, spawnSite != 0);
+        // Instantiate bird (i.e. reuse pooledbird)
+        GameObject bird = GetBird();
+        if (bird != null)
+        {
+            bird.transform.position = spawnPos;
+            bird.transform.rotation = Quaternion.identity;
+            bird.SetActive(true);
+            BirdBehavior birdBehavior = bird.GetComponent<BirdBehavior>();
+
+            // Initialize bird behavior
+            var speed = Random.Range(1.5f, 6f);
+            birdBehavior.Init(this, (BirdSize)size, speed, spawnSite != 0);
+        }
+    }
+    #endregion
+
+    #region Private Functions
+    /// <summary>
+    /// Initializes the bird pool by instantiating birds and setting them as inactive.
+    /// </summary>
+    private void InitBirdPool()
+    {
+        for (int i = 0; i < _birdPoolSize; i++)
+        {
+            GameObject bird = Instantiate(_birdPrefab, _birdPoolParent.transform);
+            bird.transform.rotation = Quaternion.identity;
+            bird.SetActive(false);
+            _birdPool.Add(bird);
+        }
     }
 
     /// <summary>
-    /// Spawns a wave of birds for each interval.
+    /// Selects an inactive bird from the pool.
     /// </summary>
-    private void SpawnWave()
+    /// <returns>An inactive bird GameObject</returns>
+    private GameObject GetBird()
     {
-        for (int i = 0; i < _spawnRate; i++)
+        foreach(var bird in _birdPool)
         {
-            Spawn();
+            if(!bird.activeInHierarchy)
+            {
+                return bird;
+            }
+        }
+
+        // Add a new bird if not enough birds are available
+        if (_allowPoolGrowth)
+        {
+            GameObject newBird = Instantiate(_birdPrefab, _birdPoolParent.transform);
+            newBird.transform.rotation = Quaternion.identity;
+            newBird.SetActive(false);
+            _birdPool.Add(newBird);
+            return newBird;
+        }
+        else
+        {
+            return null;
         }
     }
     #endregion

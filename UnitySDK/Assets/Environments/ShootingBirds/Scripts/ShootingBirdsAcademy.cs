@@ -12,25 +12,46 @@ public class ShootingBirdsAcademy : Academy
     #region Member Fields
     [SerializeField]
     private bool _log = true;
-    private List<ShootingBirdsBucketedAgent> _agents = new List<ShootingBirdsBucketedAgent>();
+    [SerializeField]
+    private ShootingBirdsAgentType _agentType = ShootingBirdsAgentType.Bucketed;
+    protected List<ShootingBirdsAgent> _agents = new List<ShootingBirdsAgent>();
     private string _fileName;
     private int _eps = 1;
+    float _summedClickAccuracies = 0;
+    float _summedReloadAccuracies = 0;
+    int count = 0;
     #endregion
 
+    #region Unity Lifecycle
     private void Start()
     {
-        _fileName = DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + UnityEngine.Random.Range(0, 10000) + ".csv";
+        _fileName = _agentType.ToString() + "-" + DateTime.Now.ToString("yyyy-dd-M--HH-mm-ss") + UnityEngine.Random.Range(0, 10000) + ".csv";
+
     }
+    #endregion
 
     #region Academy Overrides
     public override void InitializeAcademy()
     {
         // Get agent references
         var agentGos = GameObject.FindGameObjectsWithTag("Agent");
-        foreach(var go in agentGos)
+        foreach (var go in agentGos)
         {
-            if(go.GetComponent<ShootingBirdsBucketedAgent>())
-                _agents.Add(go.GetComponent<ShootingBirdsBucketedAgent>());
+            switch (_agentType)
+            {
+                case ShootingBirdsAgentType.Bucketed:
+                    if (go.GetComponent<ShootingBirdsBucketedAgent>())
+                        _agents.Add(go.GetComponent<ShootingBirdsBucketedAgent>());
+                    break;
+                case ShootingBirdsAgentType.Threshold:
+                    if (go.GetComponent<ShootingBirdsThresholdAgent>())
+                        _agents.Add(go.GetComponent<ShootingBirdsThresholdAgent>());
+                    break;
+                case ShootingBirdsAgentType.Multiagent:
+                    if (go.GetComponent<ShootingBirdsShootingAgent>())
+                        _agents.Add(go.GetComponent<ShootingBirdsShootingAgent>());
+                    break;
+            }
         }
     }
 
@@ -40,27 +61,28 @@ public class ShootingBirdsAcademy : Academy
         if(GetStepCount() == 1999 && _log)
         {
             // Get info from agents
-            float summedClickAccuracies = 0;
-            float summedReloadAccuracies = 0;
-            int count = 0;
             foreach (var agent in _agents)
             {
                 if (agent)
                 {
-                    summedClickAccuracies += agent.GetClickAccuracy();
-                    summedReloadAccuracies += agent.GetReloadAccuracy();
+                    _summedClickAccuracies += agent.GetClickAccuracy();
+                    _summedReloadAccuracies += agent.GetReloadAccuracy();
                 }
                 count++;
             }
             // create values
-            if (count > 0)
+            if (count > 0 && _eps % 10 == 0 )
             {
                 //string[] headings = new string[] {"click_accuracy", "reload_accuracy"};
                 string[] headings = new string[] {"steps", "click_accuracy"};
                 //float[] values = new float[] {summedClickAccuracies / count, summedReloadAccuracies / count};
-                float[] values = new float[] {_eps * 2000, summedClickAccuracies / count};
+                float[] values = new float[] {_eps * 2000, _summedClickAccuracies / count};
                 // write values to csv
                 WriteToCSV(",", headings, values);
+
+                _summedClickAccuracies = 0;
+                _summedReloadAccuracies = 0;
+                count = 0;
             }
             _eps++;
         }
@@ -110,4 +132,11 @@ public class ShootingBirdsAcademy : Academy
         }
     }
     #endregion
+}
+
+public enum ShootingBirdsAgentType
+{
+    Bucketed = 0,
+    Threshold = 1,
+    Multiagent = 2
 }

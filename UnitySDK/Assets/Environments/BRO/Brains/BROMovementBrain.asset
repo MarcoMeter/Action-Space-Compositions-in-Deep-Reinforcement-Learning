@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b23992c8eb17439887f5e944bf04a40, type: 3}
+  m_Name: BROMovementBrain
+  m_EditorClassIdentifier: 
+  brainParameters:
+    vectorObservationSize: 22
+    numStackedVectorObservations: 3
+    vectorActionSize: 02000000
+    cameraResolutions: []
+    vectorActionDescriptions:
+    - Horizontal Movement
+    - Vertical Movement
+    vectorActionSpaceType: 1
+  model: {fileID: 11400000, guid: f8501fb3247da044aa38cabe631756fa, type: 3}
+  inferenceDevice: 0

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using MLAgents;
+using UnityEngine.UI;
+using System;
 
 /// <summary>
 /// Base class for building agents playing BRO. It contains most of the agent's logic, except for the ML-Agent functionalities.
@@ -9,12 +11,10 @@ public abstract class BROAgent : Agent
     #region Member Fields
     [SerializeField]
     protected Academy _academy;
-    [SerializeField]
-    protected float _movementSpeed = 10.0f;
+    protected float _movementSpeed = 20.0f;
     [SerializeField]
     protected GameObject _walkFeedback;
-    [SerializeField]
-    protected int _maxBlinkCooldown = 100;
+    protected int _maxBlinkCooldown = 200;
     protected int _currentBlinkCooldown = 0;
     [SerializeField]
     protected Rigidbody _rigidbody;
@@ -31,9 +31,7 @@ public abstract class BROAgent : Agent
     protected Transform _characterTransform;
     [SerializeField]
     protected Rigidbody _characterRigidbody;
-    [SerializeField]
-    protected float _characterMovementSpeed = 7.5f;
-    [SerializeField]
+    protected float _characterMovementSpeed = 4.0f;
     protected float _characterRotationSpeed = 10.0f;
     protected float _currentArrivalSpeed = 1.0f;
     protected Vector3 _destination = Vector3.zero;
@@ -49,6 +47,104 @@ public abstract class BROAgent : Agent
     protected Renderer _renderer;
     protected bool _isSlowed = false;
     protected bool _allowChanges = true;
+
+    [Header("UI")]
+    [SerializeField]
+    private Text _averageSpeedText;
+    protected float _sumVelocityX = 0.0f;
+    protected float _sumVelocityZ = 0.0f;
+    protected int _stepDevisor = 0;
+    [SerializeField]
+    private Text _survivalDurationText;
+    protected int _survivalDuration = 0;
+    #endregion
+
+    #region ML-Agents
+    /// <summary>
+    /// Initially randomizes the positions of the environment's entities
+    /// </summary>
+    public override void AgentReset()
+    {
+        Vector3 characterPosition = SamplePitchLocation();
+        _characterTransform.position = new Vector3(characterPosition.x, _characterHeight, characterPosition.z);
+        _characterTransform.rotation = Quaternion.LookRotation(_pitchTransform.position - _characterTransform.position);
+        Vector3 mousePosition = SamplePitchLocation();
+        transform.position = new Vector3(mousePosition.x, _agentHeight, mousePosition.z);
+        _lookDirection = _pitchTransform.position - _characterTransform.position;
+        _currentBlinkCooldown = 0;
+        _isSlowed = false;
+        _beast.Reset();
+        _slowSphere.Reset(SamplePitchLocation());
+        _destinationSet = false;
+        _renderer.material = _blinkReadyMaterial;
+        
+        // UI
+        _stepDevisor = 0;
+        _sumVelocityX = 0.0f;
+        _sumVelocityZ = 0.0f;
+        _survivalDuration = 0;
+    }
+
+    /// <summary>
+    /// Collects 22 values for the observation vector.
+    /// </summary>
+    public override void CollectObservations()
+    {
+        // Remaining blink cooldown as ratio
+        AddVectorObs((float)_currentBlinkCooldown / (float)_maxBlinkCooldown);
+        // Remaining blink cooldown as binary (excluded due to using old results)
+        AddVectorObs(_currentBlinkCooldown == 0.0f);
+        // Mouse position
+        AddVectorObs(transform.localPosition.x / 7);
+        AddVectorObs(transform.localPosition.z / 7);
+        // Mouse velocity
+        AddVectorObs(_rigidbody.velocity.x / _movementSpeed);
+        AddVectorObs(_rigidbody.velocity.z / _movementSpeed);
+        // Character position
+        AddVectorObs(_characterTransform.localPosition.x / 7);
+        AddVectorObs(_characterTransform.localPosition.z / 7);
+        // Character velocity
+        AddVectorObs(_characterRigidbody.velocity.x / (_characterMovementSpeed));
+        AddVectorObs(_characterRigidbody.velocity.z / (_characterMovementSpeed));
+        // Relative position character to beast
+        AddVectorObs((_characterTransform.localPosition - _beast.transform.localPosition).x / 10);
+        AddVectorObs((_characterTransform.localPosition - _beast.transform.localPosition).z / 10);
+        // Beast position (beast can drift out of bounds)
+        AddVectorObs(_beast.transform.localPosition.x / 10);
+        AddVectorObs(_beast.transform.localPosition.z / 10);
+        // Beast velocity
+        AddVectorObs(_beast.Velocity.x / _beast.MaxSpeed);
+        AddVectorObs(_beast.Velocity.z / _beast.MaxSpeed);
+        // Beast speed
+        AddVectorObs(_beast.Speed / _beast.MaxSpeed);
+        // Beast rotation speed
+        AddVectorObs(_beast.AccuracyMagnitude / _beast.MaxAccuracyMagnitude);
+        // Relative position to slow sphere
+        AddVectorObs((_characterTransform.localPosition - _slowSphere.transform.localPosition).x / 7);
+        AddVectorObs((_characterTransform.localPosition - _slowSphere.transform.localPosition).z / 7);
+        // Slow sphere velocity
+        AddVectorObs(_slowSphere.Velocity.x / _slowSphere.Speed);
+        AddVectorObs(_slowSphere.Velocity.z / _slowSphere.Speed);
+    }
+
+    /// <summary>
+    /// Updates UI.
+    /// </summary>
+    /// <param name="vectorAction"></param>
+    /// <param name="textAction"></param>
+    public override void AgentAction(float[] vectorAction, string textAction)
+    {
+        // Update UI
+        _stepDevisor++;
+        _sumVelocityX += Math.Abs(_rigidbody.velocity.x);
+        _sumVelocityZ += Math.Abs(_rigidbody.velocity.z);
+        _averageSpeedText.text = (_sumVelocityX / _stepDevisor).ToString("0.00") + " | " + (_sumVelocityZ / _stepDevisor).ToString("0.00");
+        if (_stepDevisor % 6 == 0) // 6 = decision frequency
+        {
+            _survivalDuration++;
+        }
+        _survivalDurationText.text = _survivalDuration.ToString();
+    }
     #endregion
 
     #region Unity Lifecycle
@@ -59,28 +155,6 @@ public abstract class BROAgent : Agent
     {
         _agentHeight = transform.position.y;
         _characterHeight = _characterTransform.position.y;
-    }
-
-    /// <summary>
-    /// Used for player inputs.
-    /// </summary>
-    protected void Update()
-    {
-        if (brain.brainType.Equals(BrainType.Player))
-        {
-            // Agent ("mouse") movement
-            _rigidbody.velocity = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * _movementSpeed;
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Move();
-            }
-
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                Blink();
-            }
-        }
     }
 
     /// <summary>
@@ -148,8 +222,11 @@ public abstract class BROAgent : Agent
             {
                 _characterRigidbody.velocity = Vector3.zero;
             }
+        }
 
-            // Rotate towards movement direction
+        // Rotate towards movement direction
+        if (_lookDirection != Vector3.zero)
+        {
             _characterTransform.rotation = Quaternion.RotateTowards(_characterTransform.rotation, Quaternion.LookRotation(_lookDirection), _characterRotationSpeed);
         }
     }
@@ -194,10 +271,10 @@ public abstract class BROAgent : Agent
     /// Samples a random position which is on the pitch.
     /// </summary>
     /// <returns>Random position on the pitch.</returns>
-    protected Vector3 SamplePitchLocation()
+    public Vector3 SamplePitchLocation()
     {
-        float a = Random.Range(0.0f, 1.0f) * 2 * Mathf.PI;
-        float r = (_pitchTransform.localScale.x / 2) * Mathf.Sqrt(Random.Range(0.0f, 1.0f)); // Radius is assumed to be the scale
+        float a = UnityEngine.Random.Range(0.0f, 1.0f) * 2 * Mathf.PI;
+        float r = (_pitchTransform.localScale.x / 2) * Mathf.Sqrt(UnityEngine.Random.Range(0.0f, 1.0f)); // Radius is assumed to be the scale
         Vector3 location = new Vector3(_pitchTransform.position.x + (r * Mathf.Cos(a)), 0,
                                        _pitchTransform.position.z + (r * Mathf.Sin(a)));
 

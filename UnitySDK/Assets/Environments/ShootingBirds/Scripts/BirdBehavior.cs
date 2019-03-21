@@ -6,16 +6,17 @@
 public class BirdBehavior : MonoBehaviour
 {
     #region Member Fields
+    private ShootingBirdsEnvironment _environment;
     [SerializeField]
     private Rigidbody2D _rigidbody;
     [SerializeField]
     private GameObject _explosionParticles;
     private BirdSize _size;
-    private float _sizeS = 0.2f;
-    private float _sizeM = 0.4f;
-    private float _sizeL = 0.6f;
-    private float _lifespan = 15.0f;
+    private Vector3 _sizeS = new Vector3(0.2f, 0.2f, 1.0f);
+    private Vector3 _sizeM = new Vector3(0.4f, 0.4f, 1.0f);
+    private Vector3 _sizeL = new Vector3(0.6f, 0.6f, 1.0f);
     private float _movementShift;
+    private float _aliveRange = 20.0f;
     #endregion
 
     #region Member Properties
@@ -40,6 +41,9 @@ public class BirdBehavior : MonoBehaviour
     private void FixedUpdate()
     {
         _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, Mathf.Sin(Time.time * 2.0f + _movementShift));
+
+        if (Mathf.Abs(transform.localPosition.x) > _aliveRange)
+            KillBird();
     }
     #endregion
 
@@ -50,21 +54,22 @@ public class BirdBehavior : MonoBehaviour
     /// <param name="size">Size of the bird</param>
     /// <param name="speed">Moving speed of the bird</param>
     /// <param name="flipped">Determines the direction, if false direction is positive x</param>
-    public void Init(BirdSize size, float speed, bool flipped)
+    public void Init(ShootingBirdsEnvironment env, BirdSize size, float speed, bool flipped)
     {
+        _environment = env;
         _size = size;
 
         // Set scale
         switch (_size)
         {
             case BirdSize.S:
-                transform.localScale = new Vector3(_sizeS, _sizeS, 1);
+                transform.localScale = _sizeS;
                 break;
             case BirdSize.M:
-                transform.localScale = new Vector3(_sizeM, _sizeM, 1);
+                transform.localScale = _sizeM;
                 break;
             case BirdSize.L:
-                transform.localScale = new Vector3(_sizeL, _sizeL, 1);
+                transform.localScale = _sizeL;
                 break;
         }
 
@@ -76,9 +81,6 @@ public class BirdBehavior : MonoBehaviour
 
         // Apply velocity
         _rigidbody.velocity = (Vector2)(transform.right * speed);
-
-        // Kill the bird after a certain amount of time
-        Invoke("KillBird", _lifespan);
     }
 
     /// <summary>
@@ -97,8 +99,8 @@ public class BirdBehavior : MonoBehaviour
     /// </summary>
     private void KillBird()
     {
-        CancelInvoke(); // If the bird is killed by the player, make sure that any further invocations are cancelled to avoid NullRefs.
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        _environment.Spawn();
     }
     #endregion
 }
