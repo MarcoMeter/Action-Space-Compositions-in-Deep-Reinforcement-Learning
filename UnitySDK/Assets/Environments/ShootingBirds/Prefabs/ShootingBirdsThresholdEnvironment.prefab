@@ -1077,6 +1077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4885641003911662}
   - component: {fileID: 212818121870975950}
+  - component: {fileID: 9067615129843529113}
   - component: {fileID: 114446537965375468}
   - component: {fileID: 50704241613107332}
   - component: {fileID: 58526984190345682}
@@ -1152,6 +1153,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &9067615129843529113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164538312399148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    vectorObservationSize: 44
+    numStackedVectorObservations: 3
+    vectorActionSize: 04000000
+    vectorActionDescriptions: []
+    vectorActionSpaceType: 1
+  m_Model: {fileID: 5022602860645237092, guid: ff76618caf3b5904db9728a62784df94, type: 3}
+  m_InferenceDevice: 0
+  m_UseHeuristic: 0
+  m_BehaviorName: SBThresholdBrain
 --- !u!114 &114446537965375468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,10 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40dac5dcc666c9d46aa74d02ed59e973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brain: {fileID: 11400000, guid: a3929aee2995c584982912a01fbc1f71, type: 2}
   agentParameters:
-    agentCameras: []
-    agentRenderTextures: []
     maxStep: 2000
     resetOnDone: 1
     onDemandDecision: 0

@@ -3,13 +3,13 @@
 public class ShootingBirdsShootingAgent : ShootingBirdsAgent
 {
     #region Member Fields
+    [SerializeField]
     private ShootingBirdsMovementAgent _movementAgent;
     #endregion
 
     #region Unity ML-Agents
     public override void InitializeAgent()
     {
-        _movementAgent = GetComponent<ShootingBirdsMovementAgent>();
         base.InitializeAgent();
     }
 
