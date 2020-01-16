@@ -15,5 +15,18 @@ pip install tensorflow==1.7.*
 
 # Citing this paper
 
-This paper has been submitted to COG 2019.
-Once the paper got published, a bibtex citation can be found here.
+```
+@inproceedings{Pleines2019,
+  author    = {Marco Pleines and
+               Frank Zimmer and
+               Vincent{-}Pierre Berges},
+  title     = {Action Spaces in Deep Reinforcement Learning to Mimic Human Input
+               Devices},
+  booktitle = {{IEEE} Conference on Games, CoG 2019, London, United Kingdom, August
+               20-23, 2019},
+  pages     = {1--8},
+  year      = {2019},
+  url       = {https://doi.org/10.1109/CIG.2019.8848080},
+  doi       = {10.1109/CIG.2019.8848080}
+}
+```
