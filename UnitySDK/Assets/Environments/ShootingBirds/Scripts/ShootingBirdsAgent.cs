@@ -113,7 +113,7 @@ public class ShootingBirdsAgent : Agent
     /// <summary>
     /// Call this base to update the speed UI.
     /// </summary>
-    public override void AgentAction(float[] vectorAction, string textAction)
+    public override void AgentAction(float[] vectorAction)
     {
         // Update speed UI
         _stepDevisor++;

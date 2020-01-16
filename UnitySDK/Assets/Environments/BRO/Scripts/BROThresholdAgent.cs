@@ -27,7 +27,7 @@ public class BROThresholdAgent : BROAgent
     /// </summary>
     /// <param name="vectorAction"></param>
     /// <param name="textAction"></param>
-    public override void AgentAction(float[] vectorAction, string textAction)
+    public override void AgentAction(float[] vectorAction)
     {
         // "Mouse Movement"
         // Unit circle locomotion: first action determines the angle (direction), the second one the speed
@@ -56,7 +56,7 @@ public class BROThresholdAgent : BROAgent
         AddReward(0.01f);
 
         // Update UI
-        base.AgentAction(vectorAction, textAction);
+        base.AgentAction(vectorAction);
     }
     #endregion
 }

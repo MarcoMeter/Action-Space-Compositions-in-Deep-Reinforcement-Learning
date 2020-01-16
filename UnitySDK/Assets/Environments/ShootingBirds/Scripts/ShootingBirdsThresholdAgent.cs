@@ -34,7 +34,7 @@ public class ShootingBirdsThresholdAgent : ShootingBirdsAgent
     /// <summary>
     /// Executes actions for movement, shooting and reloading.
     /// </summary>
-    public override void AgentAction(float[] vectorAction, string textAction)
+    public override void AgentAction(float[] vectorAction)
     {
         // Unit circle locomotion: first action determines the angle (direction), the second one the speed
         // Process the action
@@ -57,7 +57,7 @@ public class ShootingBirdsThresholdAgent : ShootingBirdsAgent
             Reload();
         }
 
-        base.AgentAction(vectorAction, textAction);
+        base.AgentAction(vectorAction);
     }
     #endregion
 }

@@ -32,7 +32,7 @@ public class ShootingBirdsShootingAgent : ShootingBirdsAgent
     /// <summary>
     /// Executes discrete actions: nothing, shooting, reloading.
     /// </summary>
-    public override void AgentAction(float[] vectorAction, string textAction)
+    public override void AgentAction(float[] vectorAction)
     {
         int action = Mathf.FloorToInt(vectorAction[0]);
         switch (action)

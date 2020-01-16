@@ -43,7 +43,7 @@ public class ShootingBirdsMovementAgent : ShootingBirdsAgent
     /// <summary>
     /// Executes continuous movement.
     /// </summary>
-    public override void AgentAction(float[] vectorAction, string textAction)
+    public override void AgentAction(float[] vectorAction)
     {        
         // Unit circle locomotion: first action determines the angle (direction), the second one the speed
         // Process the action
@@ -55,7 +55,7 @@ public class ShootingBirdsMovementAgent : ShootingBirdsAgent
         // Apply velocity based on direction (coming from the unit circle)
         _rigidbody.velocity = circumferencePoint.normalized * vectorAction[1] * _movementSpeed;
 
-        base.AgentAction(vectorAction, textAction);
+        base.AgentAction(vectorAction);
     }
     #endregion
 }

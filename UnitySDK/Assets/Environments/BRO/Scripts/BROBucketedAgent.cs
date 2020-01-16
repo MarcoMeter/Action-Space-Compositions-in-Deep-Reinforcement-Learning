@@ -49,7 +49,7 @@ public class BROBucketedAgent : BROAgent
     /// </summary>
     /// <param name="vectorAction"></param>
     /// <param name="textAction"></param>
-    public override void AgentAction(float[] vectorAction, string textAction)
+    public override void AgentAction(float[] vectorAction)
     {
         // Unit circle locomotion: first action determines the angle(direction), the second one the speed
         // Process the action
@@ -79,7 +79,7 @@ public class BROBucketedAgent : BROAgent
         AddReward(0.01f); // For each step of survival
 
         // Updates the UI
-        base.AgentAction(vectorAction, textAction);
+        base.AgentAction(vectorAction);
     }
     #endregion
 }

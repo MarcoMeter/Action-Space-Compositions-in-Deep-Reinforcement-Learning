@@ -132,7 +132,7 @@ public abstract class BROAgent : Agent
     /// </summary>
     /// <param name="vectorAction"></param>
     /// <param name="textAction"></param>
-    public override void AgentAction(float[] vectorAction, string textAction)
+    public override void AgentAction(float[] vectorAction)
     {
         // Update UI
         _stepDevisor++;

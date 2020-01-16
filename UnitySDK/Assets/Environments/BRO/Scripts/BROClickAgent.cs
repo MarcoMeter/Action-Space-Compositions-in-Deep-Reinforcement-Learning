@@ -24,7 +24,7 @@ public class BROClickAgent : BROAgent
     /// </summary>
     /// <param name="vectorAction"></param>
     /// <param name="textAction"></param>
-    public override void AgentAction(float[] vectorAction, string textAction)
+    public override void AgentAction(float[] vectorAction)
     {
         int action = Mathf.FloorToInt(vectorAction[0]);
         switch (action)

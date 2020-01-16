@@ -1139,25 +1139,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c740a1edcd5be349bdd88ff6509f83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  broadcastHub:
-    broadcastingBrains:
-    - {fileID: 11400000, guid: a3929aee2995c584982912a01fbc1f71, type: 2}
-    _brainsToControl: []
-  maxSteps: 2000
-  trainingConfiguration:
+  m_TrainingConfiguration:
     width: 320
     height: 180
     qualityLevel: 1
     timeScale: 50
     targetFrameRate: -1
-  inferenceConfiguration:
+  m_InferenceConfiguration:
     width: 1280
     height: 720
     qualityLevel: 5
     timeScale: 1
     targetFrameRate: 50
   resetParameters:
-    resetParameters: []
+    m_ResetParameters: []
   _log: 0
   _agentType: 1
 --- !u!4 &785263446
@@ -1623,6 +1618,12 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9067615129843529113, guid: 55c2bda33254a03429f5725b67caacad,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: ff76618caf3b5904db9728a62784df94,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c2bda33254a03429f5725b67caacad, type: 3}
 --- !u!1001 &1410526816
