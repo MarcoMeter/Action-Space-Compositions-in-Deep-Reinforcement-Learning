@@ -1,12 +1,17 @@
 from .communicator import Communicator
-from .communicator_objects import (
-    UnityOutput,
-    UnityInput,
-    ResolutionProto,
-    BrainParametersProto,
-    UnityRLInitializationOutput,
-    AgentInfoProto,
-    UnityRLOutput,
+from .environment import UnityEnvironment
+from mlagents.envs.communicator_objects.unity_rl_output_pb2 import UnityRLOutputProto
+from mlagents.envs.communicator_objects.brain_parameters_pb2 import BrainParametersProto
+from mlagents.envs.communicator_objects.unity_rl_initialization_output_pb2 import (
+    UnityRLInitializationOutputProto,
+)
+from mlagents.envs.communicator_objects.unity_input_pb2 import UnityInputProto
+from mlagents.envs.communicator_objects.unity_output_pb2 import UnityOutputProto
+from mlagents.envs.communicator_objects.agent_info_pb2 import AgentInfoProto
+from mlagents.envs.communicator_objects.observation_pb2 import (
+    ObservationProto,
+    NONE as COMPRESSION_TYPE_NONE,
+    PNG as COMPRESSION_TYPE_PNG,
 )
 
 
@@ -15,7 +20,6 @@ class MockCommunicator(Communicator):
         self,
         discrete_action=False,
         visual_inputs=0,
-        stack=True,
         num_agents=3,
         brain_name="RealFakeBrain",
         vec_obs_size=3,
@@ -26,6 +30,7 @@ class MockCommunicator(Communicator):
         :int base_port: Baseline port number to connect to Unity environment over. worker_id increments over this.
         :int worker_id: Number to add to communication port (5005) [0]. Used for asynchronous agent scenarios.
         """
+        super().__init__()
         self.is_discrete = discrete_action
         self.steps = 0
         self.visual_inputs = visual_inputs
@@ -33,68 +38,62 @@ class MockCommunicator(Communicator):
         self.num_agents = num_agents
         self.brain_name = brain_name
         self.vec_obs_size = vec_obs_size
-        if stack:
-            self.num_stacks = 2
-        else:
-            self.num_stacks = 1
 
-    def initialize(self, inputs: UnityInput) -> UnityOutput:
-        resolutions = [
-            ResolutionProto(width=30, height=40, gray_scale=False)
-            for i in range(self.visual_inputs)
-        ]
+    def initialize(self, inputs: UnityInputProto) -> UnityOutputProto:
         bp = BrainParametersProto(
-            vector_observation_size=self.vec_obs_size,
-            num_stacked_vector_observations=self.num_stacks,
             vector_action_size=[2],
-            camera_resolutions=resolutions,
             vector_action_descriptions=["", ""],
             vector_action_space_type=int(not self.is_discrete),
             brain_name=self.brain_name,
             is_training=True,
         )
-        rl_init = UnityRLInitializationOutput(
-            name="RealFakeAcademy", version="API-8", log_path="", brain_parameters=[bp]
+        rl_init = UnityRLInitializationOutputProto(
+            name="RealFakeAcademy",
+            version=UnityEnvironment.API_VERSION,
+            log_path="",
+            brain_parameters=[bp],
         )
-        return UnityOutput(rl_initialization_output=rl_init)
+        output = UnityRLOutputProto(agentInfos=self._get_agent_infos())
+        return UnityOutputProto(rl_initialization_output=rl_init, rl_output=output)
 
-    def exchange(self, inputs: UnityInput) -> UnityOutput:
+    def _get_agent_infos(self):
         dict_agent_info = {}
-        if self.is_discrete:
-            vector_action = [1]
-        else:
-            vector_action = [1, 2]
         list_agent_info = []
-        if self.num_stacks == 1:
-            observation = [1, 2, 3]
-        else:
-            observation = [1, 2, 3, 1, 2, 3]
+        vector_obs = [1, 2, 3]
+
+        observations = [
+            ObservationProto(
+                compressed_data=None,
+                shape=[30, 40, 3],
+                compression_type=COMPRESSION_TYPE_PNG,
+            )
+            for _ in range(self.visual_inputs)
+        ]
+        vector_obs_proto = ObservationProto(
+            float_data=ObservationProto.FloatData(data=vector_obs),
+            shape=[len(vector_obs)],
+            compression_type=COMPRESSION_TYPE_NONE,
+        )
+        observations.append(vector_obs_proto)
 
         for i in range(self.num_agents):
             list_agent_info.append(
                 AgentInfoProto(
-                    stacked_vector_observation=observation,
                     reward=1,
-                    stored_vector_actions=vector_action,
-                    stored_text_actions="",
-                    text_observation="",
-                    memories=[],
                     done=(i == 2),
                     max_step_reached=False,
                     id=i,
+                    observations=observations,
                 )
             )
-        dict_agent_info["RealFakeBrain"] = UnityRLOutput.ListAgentInfoProto(
+        dict_agent_info["RealFakeBrain"] = UnityRLOutputProto.ListAgentInfoProto(
             value=list_agent_info
         )
-        global_done = False
-        try:
-            fake_brain = inputs.rl_input.agent_actions["RealFakeBrain"]
-            global_done = fake_brain.value[0].vector_actions[0] == -1
-        except:
-            pass
-        result = UnityRLOutput(global_done=global_done, agentInfos=dict_agent_info)
-        return UnityOutput(rl_output=result)
+        return dict_agent_info
+
+    def exchange(self, inputs: UnityInputProto) -> UnityOutputProto:
+        result = UnityRLOutputProto(agentInfos=self._get_agent_infos())
+        return UnityOutputProto(rl_output=result)
 
     def close(self):
         """

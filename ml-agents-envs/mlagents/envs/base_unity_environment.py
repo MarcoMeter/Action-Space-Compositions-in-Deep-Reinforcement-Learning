@@ -1,23 +1,23 @@
 from abc import ABC, abstractmethod
-from typing import Dict
+from typing import Dict, Optional, Any
 
-from mlagents.envs import AllBrainInfo, BrainParameters
+from mlagents.envs.brain import AllBrainInfo, BrainParameters
 
 
 class BaseUnityEnvironment(ABC):
     @abstractmethod
     def step(
-        self, vector_action=None, memory=None, text_action=None, value=None
+        self, vector_action: Optional[Dict] = None, value: Optional[Dict] = None
     ) -> AllBrainInfo:
         pass
 
     @abstractmethod
-    def reset(self, config=None, train_mode=True) -> AllBrainInfo:
-        pass
-
-    @property
-    @abstractmethod
-    def global_done(self):
+    def reset(
+        self,
+        config: Optional[Dict] = None,
+        train_mode: bool = True,
+        custom_reset_parameters: Any = None,
+    ) -> AllBrainInfo:
         pass
 
     @property
@@ -27,7 +27,7 @@ class BaseUnityEnvironment(ABC):
 
     @property
     @abstractmethod
-    def reset_parameters(self) -> Dict[str, str]:
+    def reset_parameters(self) -> Dict[str, float]:
         pass
 
     @abstractmethod

@@ -1,3 +1,1 @@
-from .brain import *
-from .environment import *
-from .exception import *
+__version__ = "0.12.1"

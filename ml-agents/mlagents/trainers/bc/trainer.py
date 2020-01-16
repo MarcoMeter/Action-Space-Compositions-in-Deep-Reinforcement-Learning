@@ -5,9 +5,9 @@
 import logging
 
 import numpy as np
-import tensorflow as tf
 
-from mlagents.envs import AllBrainInfo
+from mlagents.envs.brain import BrainInfo
+from mlagents.envs.action_info import ActionInfoOutputs
 from mlagents.trainers.bc.policy import BCPolicy
 from mlagents.trainers.buffer import Buffer
 from mlagents.trainers.trainer import Trainer
@@ -43,94 +43,56 @@ class BCTrainer(Trainer):
         self.demonstration_buffer = Buffer()
         self.evaluation_buffer = Buffer()
 
-    @property
-    def parameters(self):
-        """
-        Returns the trainer parameters of the trainer.
-        """
-        return self.trainer_parameters
-
-    @property
-    def get_max_steps(self):
-        """
-        Returns the maximum number of steps. Is used to know when the trainer should be stopped.
-        :return: The maximum number of steps of the trainer
-        """
-        return float(self.trainer_parameters["max_steps"])
-
-    @property
-    def get_step(self):
-        """
-        Returns the number of steps the trainer has performed
-        :return: the step count of the trainer
-        """
-        return self.policy.get_current_step()
-
-    @property
-    def get_last_reward(self):
-        """
-        Returns the last reward the trainer has had
-        :return: the new last reward
-        """
-        if len(self.stats["Environment/Cumulative Reward"]) > 0:
-            return np.mean(self.stats["Environment/Cumulative Reward"])
-        else:
-            return 0
-
-    def increment_step_and_update_last_reward(self):
-        """
-        Increment the step count of the trainer and Updates the last reward
-        """
-        self.policy.increment_step()
-        return
-
     def add_experiences(
-        self, curr_info: AllBrainInfo, next_info: AllBrainInfo, take_action_outputs
-    ):
+        self,
+        curr_info: BrainInfo,
+        next_info: BrainInfo,
+        take_action_outputs: ActionInfoOutputs,
+    ) -> None:
         """
         Adds experiences to each agent's experience history.
-        :param curr_info: Current AllBrainInfo (Dictionary of all current brains and corresponding BrainInfo).
-        :param next_info: Next AllBrainInfo (Dictionary of all current brains and corresponding BrainInfo).
+        :param curr_info: Current BrainInfo
+        :param next_info: Next BrainInfo
         :param take_action_outputs: The outputs of the take action method.
         """
 
         # Used to collect information about student performance.
-        info_student = curr_info[self.brain_name]
-        next_info_student = next_info[self.brain_name]
-        for agent_id in info_student.agents:
-            self.evaluation_buffer[agent_id].last_brain_info = info_student
+        for agent_id in curr_info.agents:
+            self.evaluation_buffer[agent_id].last_brain_info = curr_info
 
-        for agent_id in next_info_student.agents:
-            stored_info_student = self.evaluation_buffer[agent_id].last_brain_info
-            if stored_info_student is None:
+        for agent_id in next_info.agents:
+            stored_next_info = self.evaluation_buffer[agent_id].last_brain_info
+            if stored_next_info is None:
                 continue
             else:
-                next_idx = next_info_student.agents.index(agent_id)
+                next_idx = next_info.agents.index(agent_id)
                 if agent_id not in self.cumulative_rewards:
                     self.cumulative_rewards[agent_id] = 0
-                self.cumulative_rewards[agent_id] += next_info_student.rewards[next_idx]
-                if not next_info_student.local_done[next_idx]:
+                self.cumulative_rewards[agent_id] += next_info.rewards[next_idx]
+                if not next_info.local_done[next_idx]:
                     if agent_id not in self.episode_steps:
                         self.episode_steps[agent_id] = 0
                     self.episode_steps[agent_id] += 1
 
-    def process_experiences(self, current_info: AllBrainInfo, next_info: AllBrainInfo):
+    def process_experiences(
+        self, current_info: BrainInfo, next_info: BrainInfo
+    ) -> None:
         """
         Checks agent histories for processing condition, and processes them as necessary.
         Processing involves calculating value and advantage targets for model updating step.
-        :param current_info: Current AllBrainInfo
-        :param next_info: Next AllBrainInfo
+        :param current_info: Current BrainInfo
+        :param next_info: Next BrainInfo
         """
-        info_student = next_info[self.brain_name]
-        for l in range(len(info_student.agents)):
-            if info_student.local_done[l]:
-                agent_id = info_student.agents[l]
+        for l in range(len(next_info.agents)):
+            if next_info.local_done[l]:
+                agent_id = next_info.agents[l]
                 self.stats["Environment/Cumulative Reward"].append(
                     self.cumulative_rewards.get(agent_id, 0)
                 )
                 self.stats["Environment/Episode Length"].append(
                     self.episode_steps.get(agent_id, 0)
                 )
+                self.reward_buffer.appendleft(self.cumulative_rewards.get(agent_id, 0))
                 self.cumulative_rewards[agent_id] = 0
                 self.episode_steps[agent_id] = 0
 
@@ -158,17 +120,19 @@ class BCTrainer(Trainer):
         """
         Updates the policy.
         """
-        self.demonstration_buffer.update_buffer.shuffle()
+        self.demonstration_buffer.update_buffer.shuffle(self.policy.sequence_length)
         batch_losses = []
+        batch_size = self.n_sequences * self.policy.sequence_length
+        # We either divide the entire buffer into num_batches batches, or limit the number
+        # of batches to batches_per_epoch.
         num_batches = min(
-            len(self.demonstration_buffer.update_buffer["actions"]) // self.n_sequences,
+            len(self.demonstration_buffer.update_buffer["actions"]) // batch_size,
             self.batches_per_epoch,
         )
-        for i in range(num_batches):
+
+        for i in range(0, num_batches * batch_size, batch_size):
             update_buffer = self.demonstration_buffer.update_buffer
-            start = i * self.n_sequences
-            end = (i + 1) * self.n_sequences
-            mini_batch = update_buffer.make_mini_batch(start, end)
+            mini_batch = update_buffer.make_mini_batch(i, i + batch_size)
             run_out = self.policy.update(mini_batch, self.n_sequences)
             loss = run_out["policy_loss"]
             batch_losses.append(loss)

@@ -1,3 +1,5 @@
+# pylint: skip-file
+# flake8: noqa
 from __future__ import print_function
 from collections import defaultdict
 import numpy as np
@@ -8,6 +10,7 @@ import argparse
 import os.path
 
 BARRACUDA_VERSION = 16
+
 
 # Definition of Barracuda model
 class Model:
@@ -119,7 +122,7 @@ def sort(model, inputs, memories, verbose):
 
             # Recur for all the vertices adjacent to this vertex
             for i in self.graph[v]:
-                if visited[i] == False:
+                if not visited[i]:
                     self.topologicalSortUtil(i, visited, stack)
 
             # Push current vertex to stack which stores result
@@ -135,7 +138,7 @@ def sort(model, inputs, memories, verbose):
             # Call the recursive helper function to store Topological
             # Sort starting from all vertices one by one
             for i in range(self.V):
-                if visited[i] == False:
+                if not visited[i]:
                     self.topologicalSortUtil(i, visited, stack)
 
             # print(stack)
@@ -523,7 +526,7 @@ class BarracudaWriter:
     def write_shape(self, s):
         self.write_int32(len(s))
         for el in s:
-            self.write_int32(el if el != None else -1)
+            self.write_int32(el if el is not None else -1)
 
     def close(self):
         self.f.close()
@@ -560,7 +563,7 @@ def write(model, filename):
         w.write_int32(len(model.layers))
         for l in model.layers:
 
-            assert not l.name in l.inputs
+            assert l.name not in l.inputs
 
             w.write_str(l.name)
             w.write_int32(l.type)
