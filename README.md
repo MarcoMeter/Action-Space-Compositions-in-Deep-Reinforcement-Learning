@@ -1,6 +1,6 @@
 # Action Spaces in Deep Reinforcement Learning to Mimic Human Input Devices
 
-This repository contributes the environments Shooting Birds and Beasrly Rivals Onslaught, which were examined in the underlying paper (headline name).
+This repository contributes the environments Shooting Birds and Beastly Rivals Onslaught, which were examined in the underlying paper (headline name).
 Hyperparameters can be retrieved from the [config](https://github.com/MarcoMeter/Action-Space-Compositions-in-Deep-Reinforcement-Learning/blob/master/config/trainer_config.yaml).
 A video showing the results can be found on [Youtube](https://www.youtube.com/watch?v=Pb14i3srRWc&feature=youtu.be).
 
