@@ -17,6 +17,9 @@ Checkout the "update" branch if you are looking for project files using more rec
 
 # Citing this paper
 
+Link to the paper:
+https://ieeexplore.ieee.org/document/8848080
+
 ```
 @inproceedings{Pleines2019,
   author    = {Marco Pleines and
