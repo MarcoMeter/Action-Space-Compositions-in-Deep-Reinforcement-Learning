@@ -13,6 +13,8 @@ pip install -e /ml-agents/.
 pip install tensorflow==1.7.*
 ```
 
+Checkout the "update" branch if you are looking for project files using more recent dependencies (ml-agents & Unity).
+
 # Citing this paper
 
 ```
